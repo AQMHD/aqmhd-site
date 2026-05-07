@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="Preliminary program for the 12th Aquatic Models of Human Disease Conference">
+
+  <title>Program | AQMHD 2026</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --blue: #0081C8;
+      --blue-dark: #0d3b5c;
+      --blue-soft: #e8f5fb;
+      --gray-light: #f3f5f7;
+      --text: #263238;
+      --muted: #60717c;
+      --white: #ffffff;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      color: var(--text);
+      font-family: "Lato", Arial, Helvetica, sans-serif;
+      font-size: 18px;
+      line-height: 1.6;
+      background: var(--white);
+    }
+
+    a { color: var(--blue); }
+
+    .container {
+      width: min(1120px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--white);
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    .brand-row {
+      padding: 1rem 0;
+    }
+
+    .site-logo {
+      font-family: "Josefin Sans", sans-serif;
+      font-size: clamp(1.7rem, 4vw, 2.8rem);
+      line-height: 1;
+      color: var(--blue-dark);
+      letter-spacing: 0.03em;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    .site-logo span {
+      display: block;
+      margin-top: 0.25rem;
+      font-family: "Lato", Arial, sans-serif;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      color: var(--muted);
+    }
+
+    .nav-bar { background: var(--blue); }
+
+    .nav-bar ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .nav-bar a {
+      display: block;
+      padding: 0.95rem 1.1rem;
+      color: var(--white);
+      text-decoration: none;
+      font-size: 0.92rem;
+      font-weight: 700;
+    }
+
+    .nav-bar a:hover,
+    .nav-bar a:focus {
+      text-decoration: underline;
+    }
+
+    .page-hero {
+      background: var(--blue-soft);
+      padding: 4rem 0;
+      text-align: center;
+    }
+
+    .page-hero h1 {
+      margin: 0 0 1rem;
+      color: var(--blue-dark);
+      font-family: "Josefin Sans", sans-serif;
+      font-size: clamp(2.4rem, 6vw, 4.5rem);
+      font-weight: 300;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    section { padding: 4.25rem 0; }
+
+    h2 {
+      margin: 0 0 2rem;
+      color: var(--blue-dark);
+      font-family: "Josefin Sans", sans-serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 300;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    h3 {
+      margin: 0 0 1rem;
+      color: var(--blue-dark);
+      font-size: 1.35rem;
+      line-height: 1.25;
+    }
+
+    .panel {
+      background: var(--white);
+      border-radius: 6px;
+      padding: 2rem;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+      margin-bottom: 1.5rem;
+      border-left: 6px solid var(--blue);
+    }
+
+    .program-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .program-list li {
+      padding: 0.55rem 0;
+      border-bottom: 1px solid #dce8ee;
+    }
+
+    .program-list li:last-child {
+      border-bottom: none;
+    }
+
+    .keynote {
+      color: var(--blue);
+      font-weight: 900;
+    }
+
+    .time {
+      display: inline-block;
+      min-width: 150px;
+      font-weight: 900;
+      color: var(--blue-dark);
+    }
+
+    .program-note {
+      display: block;
+      margin-left: 150px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    footer {
+      background: var(--blue-dark);
+      color: var(--white);
+      padding: 2.5rem 0;
+      font-size: 0.95rem;
+    }
+
+    footer a { color: var(--white); }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: 2rem;
+    }
+
+    @media (max-width: 800px) {
+      .site-header { position: relative; }
+
+      .nav-bar ul {
+        display: block;
+        text-align: center;
+      }
+
+      .nav-bar a {
+        padding: 0.75rem 1rem;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .time {
+        display: block;
+        min-width: 0;
+      }
+
+      .program-note {
+        margin-left: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container brand-row">
+      <a class="site-logo" href="index.html" aria-label="AQMHD 2026 home">
+        AQMHD 2026
+        <span>Aquatic Models of Human Disease</span>
+      </a>
+    </div>
+
+    <nav class="nav-bar" aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#organisms">Model Organisms</a></li>
+        <li><a href="program.html">Program</a></li>
+        <li><a href="platform-speakers.html">Platform Speakers</a></li>
+        <li><a href="index.html#speakers">Keynotes</a></li>
+        <li><a href="index.html#registration">Registration</a></li>
+        <li><a href="index.html#venue">Venue</a></li>
+        <li><a href="index.html#sponsors">Sponsors</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="page-hero">
+      <div class="container">
+        <h1>Preliminary Program</h1>
+        <p>October 17–21, 2026 · Marine Biological Laboratory · Woods Hole, Massachusetts</p>
+      </div>
+    </div>
+
+    <section>
+      <div class="container">
+        
+        <div class="panel">
+          <h3>Saturday · October 17</h3>
+          <ul class="program-list">
+            <li>Registration</li>
+            <li>Congenital and Developmental Disorders</li>
+            <li><span class="keynote">Keynote Lecture: Deirdre Lyons</span></li>
+            <li>Welcome Reception</li>
+          </ul>
+        </div>
+
+        <div class="panel">
+          <h3>Sunday · October 18</h3>
+          <ul class="program-list">
+            <li>Regeneration and Reproductive Biology</li>
+            <li>Cancer and Aging</li>
+            <li>Aquatic Genomics and Genetic Approaches to Disease Discovery</li>
+            <li>Poster Session I</li>
+            <li>Panel Discussion: Originality, Integrity, and Artificial Intelligence</li>
+            <li><span class="keynote">Keynote Lecture: Tatjana Sauka-Spengler</span></li>
+          </ul>
+        </div>
+
+        <div class="panel">
+          <h3>Monday · October 19</h3>
+          <ul class="program-list">
+            <li>Neurological Development, Function, and Disease</li>
+            <li>Metabolic and Endocrine Disease</li>
+            <li>Immunity and Microbiome</li>
+            <li>Poster Session II</li>
+            <li><span class="keynote">Keynote Lecture: Daniel Bolnick</span></li>
+          </ul>
+        </div>
+
+        <div class="panel">
+          <h3>Tuesday · October 20</h3>
+          <ul class="program-list">
+            <li>Toxicology, Environmental Exposure, and Disease Risk</li>
+            <li>Behavior, Neuroendocrinology, and Physiology</li>
+            <li>Evolutionary and Comparative Disease Models</li>
+            <li>Panel Discussion: Humanized Models, -oids, and Aquatic Models of Human Disease</li>
+            <li>Nutrition and Chronic Diseases</li>
+            <li>Conference Dinner and Awards Ceremony</li>
+          </ul>
+        </div>
+
+        <div class="panel">
+          <h3>Wednesday · October 21</h3>
+          <ul class="program-list">
+            <li>Departure</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <strong>AQMHD 2026</strong><br>
+        12th Aquatic Models of Human Disease Conference<br>
+        October 17–21, 2026
+      </div>
+      <div>
+        Marine Biological Laboratory<br>
+        Woods Hole, Massachusetts<br>
+        <a href="mailto:aqmhd2026@gmail.com">aqmhd2026@gmail.com</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

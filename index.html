@@ -249,6 +249,61 @@
       break-inside: avoid;
     }
 
+    .highlight-name {
+      color: var(--blue);
+      font-weight: 900;
+    }
+
+    .organizer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .organizer-card {
+      background: var(--white);
+      padding: 1.5rem;
+      border-top: 5px solid var(--blue);
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+      border-radius: 4px;
+      text-align: center;
+    }
+
+    .organizer-card strong {
+      display: block;
+      color: var(--blue-dark);
+      margin-bottom: 0.35rem;
+      font-size: 1.05rem;
+    }
+
+    .organizer-card span {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+
+    .organizer-list {
+      margin-top: 0.5rem;
+    }
+
+    .organizer-entry {
+      margin-bottom: 1rem;
+      line-height: 1.35;
+    }
+
+    .organizer-name {
+      display: block;
+      font-weight: 900;
+      color: var(--blue-dark);
+    }
+
+    .organizer-inst {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+
     .slideshow {
       position: relative;
       max-width: 950px;
@@ -473,9 +528,9 @@
 
           <h3>Keynotes</h3>
           <p>
-            Dr. Daniel Bolnick<br>
-            Dr. Deirdre Lyons<br>
-            Dr. Tatjana Sauka-Spengler
+            <span class="highlight-name">Dr. Daniel Bolnick</span><br>
+            <span class="highlight-name">Dr. Deirdre Lyons</span><br>
+            <span class="highlight-name">Dr. Tatjana Sauka-Spengler</span>
           </p>
 
           <h3>Questions?</h3>
@@ -632,7 +687,36 @@
       </div>
     </section>
 
-    <section id="contact" class="blue-soft">
+    
+    <section id="organizers">
+      <div class="container">
+        <h2>Organizing Committee</h2>
+
+        <div class="organizer-grid">
+          <div class="organizer-card">
+            <strong>Harini Iyer</strong>
+            <span>Rice University</span>
+          </div>
+
+          <div class="organizer-card">
+            <strong>Yuan Lu</strong>
+            <span>Texas State University</span>
+          </div>
+
+          <div class="organizer-card">
+            <strong>Stefan C. Materna</strong>
+            <span>University of California, Merced</span>
+          </div>
+
+          <div class="organizer-card">
+            <strong>Andrew W. Thompson</strong>
+            <span>Western Michigan University</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<section id="contact" class="blue-soft">
       <div class="container">
         <h2>Contact</h2>
         <div class="panel">
@@ -676,8 +760,9 @@
 	"images/model_organisms/zebrafish.jpg",
 	"images/model_organisms/estamanica-squid.jpg",
 	"images/model_organisms/pearlfish.jpg",
+	"images/model_organisms/xiphophorus.jpg",
 	"images/model_organisms/zebrafish-embryos.jpg",
-	"images/model_organisms/zebrafish-reporter.jpg"
+	"images/model_organisms/zebrafish-reporter.jpg",
     ];
 
     const slideshow = document.getElementById("organism-slideshow");

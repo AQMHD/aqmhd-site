@@ -1,16 +1,17 @@
-<!DOCTYPE html>
-
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<meta content="light" name="color-scheme"/>
-<meta content="Confirmed platform speakers for the 12th Aquatic Models of Human Disease Conference" name="description"/>
-<title>Platform Speakers | AQMHD 2026</title>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&amp;family=Lato:wght@300;400;700;900&amp;display=swap" rel="stylesheet"/>
-<style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="Confirmed invited platform speakers for the 12th Aquatic Models of Human Disease Conference">
+
+  <title>Platform Speakers | AQMHD 2026</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+  <style>
     :root {
       --blue: #0081C8;
       --blue-dark: #0d3b5c;
@@ -48,9 +49,7 @@
       box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
     }
 
-    .brand-row {
-      padding: 1rem 0;
-    }
+    .brand-row { padding: 1rem 0; }
 
     .site-logo {
       font-family: "Josefin Sans", sans-serif;
@@ -93,9 +92,7 @@
     }
 
     .nav-bar a:hover,
-    .nav-bar a:focus {
-      text-decoration: underline;
-    }
+    .nav-bar a:focus { text-decoration: underline; }
 
     .page-hero {
       background: var(--blue-soft);
@@ -127,37 +124,10 @@
     }
 
     h3 {
-      margin: 0 0 0.75rem;
+      margin: 0 0 1rem;
       color: var(--blue-dark);
       font-size: 1.35rem;
       line-height: 1.25;
-    }
-
-    .card-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
-    }
-
-    .card {
-      background: var(--white);
-      border-top: 6px solid var(--blue);
-      padding: 1.5rem;
-      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
-      border-radius: 4px;
-    }
-
-    .card p {
-      margin: 0.4rem 0;
-    }
-
-    .speaker-session {
-      color: var(--muted);
-      font-size: 0.95rem;
-    }
-
-    .session-heading {
-      margin-top: 3rem;
     }
 
     footer {
@@ -177,154 +147,236 @@
 
     @media (max-width: 800px) {
       .site-header { position: relative; }
-
-      .nav-bar ul {
-        display: block;
-        text-align: center;
-      }
-
-      .nav-bar a {
-        padding: 0.75rem 1rem;
-      }
-
-      .footer-grid {
-        grid-template-columns: 1fr;
-      }
+      .nav-bar ul { display: block; text-align: center; }
+      .nav-bar a { padding: 0.75rem 1rem; }
+      .footer-grid { grid-template-columns: 1fr; }
     }
-  </style>
+
+    .session-block { margin-bottom: 3rem; }
+
+    .session-heading {
+      margin: 0 0 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--blue-soft);
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: var(--white);
+      border-top: 6px solid var(--blue);
+      padding: 1.5rem;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+      border-radius: 4px;
+    }
+
+    .card p { margin: 0.4rem 0; }
+
+    .speaker-session,
+    .representative-note {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+</style>
 </head>
 <body>
-<header class="site-header">
-<div class="container brand-row">
-<a aria-label="AQMHD 2026 home" class="site-logo" href="index.html">
+  <header class="site-header">
+    <div class="container brand-row">
+      <a class="site-logo" href="index.html" aria-label="AQMHD 2026 home">
         AQMHD 2026
         <span>Aquatic Models of Human Disease</span>
-</a>
-</div>
-<nav aria-label="Main navigation" class="nav-bar">
-<ul>
-<li><a href="index.html#about">About</a></li>
-<li><a href="index.html#organisms">Model Organisms</a></li>
-<li><a href="program.html">Program</a></li>
-<li><a href="platform-speakers.html">Platform Speakers</a></li>
-<li><a href="index.html#speakers">Keynotes</a></li>
-<li><a href="index.html#registration">Registration</a></li>
-<li><a href="index.html#venue">Venue</a></li>
-<li><a href="index.html#sponsors">Sponsors</a></li>
-<li><a href="index.html#contact">Contact</a></li>
-</ul>
-</nav>
-</header>
-<main>
-<div class="page-hero">
-<div class="container">
-<h1>Confirmed Platform Speakers</h1>
-<p>Confirmed invited platform speakers for AQMHD 2026.</p>
-</div>
-</div>
-<section>
-<div class="container">
-<div class="card-grid"><div class="card">
-<h3>Carrie Albertin</h3>
-<p>Harvard University</p>
-<p class="speaker-session">Aquatic Genomics and Genetic Approaches to Disease Discovery</p>
-</div><div class="card">
-<h3>Ramji Bhandari</h3>
-<p>University of Missouri</p>
-<p class="speaker-session">Metabolic and Endocrine Disease</p>
-</div><div class="card">
-<h3>Peggy Biga</h3>
-<p>Texas State University</p>
-<p class="speaker-session">Nutrition and Chronic Diseases</p>
-</div><div class="card">
-<h3>Kory Evans</h3>
-<p>Rice University</p>
-<p class="speaker-session">Evolutionary and Comparative Disease Models</p>
-</div><div class="card">
-<h3>Kristen Gribble</h3>
-<p>Marine Biological Laboratory</p>
-<p class="speaker-session">Cancer and Aging</p>
-</div><div class="card">
-<h3>Amro Hamdoun</h3>
-<p>Scripps</p>
-<p class="speaker-session">Regeneration and Reproductive Biology</p>
-</div><div class="card">
-<h3>Matt Harris</h3>
-<p>Harvard University</p>
-<p class="speaker-session">Evolutionary and Comparative Disease Models</p>
-</div><div class="card">
-<h3>Elizabeth Heath-Heckman</h3>
-<p>Michigan State University</p>
-<p class="speaker-session">Immunology and Microbiome</p>
-</div><div class="card">
-<h3>Luis Hernandez</h3>
-<p>Stanford University</p>
-<p class="speaker-session">Behavior, Neuroendocrinology, and Physiology</p>
-</div><div class="card">
-<h3>Veronica Hinman</h3>
-<p>Whitney Marine Laboratory</p>
-<p class="speaker-session">Congenital and Developmental Disorders</p>
-</div><div class="card">
-<h3>Ellen Hoffman</h3>
-<p>Yale University</p>
-<p class="speaker-session">Neurological Development, Function, and Disease</p>
-</div><div class="card">
-<h3>Jane Kudyakov</h3>
-<p>University of the Pacific</p>
-<p class="speaker-session">Metabolic and Endocrine Disease</p>
-</div><div class="card">
-<h3>Enoch Ng’oma</h3>
-<p>University of Missouri</p>
-<p class="speaker-session">Cancer and Aging</p>
-</div><div class="card">
-<h3>Mike Schmale</h3>
-<p>University of Miami</p>
-<p class="speaker-session">Neurological Development, Function, and Disease</p>
-</div><div class="card">
-<h3>Frauke Seemann</h3>
-<p>Texas A&amp;M University</p>
-<p class="speaker-session">Toxicology, Environmental Exposure, and Disease Risk</p>
-</div><div class="card">
-<h3>Mansi Srivastava</h3>
-<p>Harvard University</p>
-<p class="speaker-session">Regeneration and Reproductive Biology</p>
-</div><div class="card">
-<h3>Rosa Uribe</h3>
-<p>Rice University</p>
-<p class="speaker-session">Congenital and Developmental Disorders</p>
-</div><div class="card">
-<h3>Daniel Wagner</h3>
-<p>University of California, San Francisco</p>
-<p class="speaker-session">Aquatic Genomics and Genetic Approaches to Disease Discovery</p>
-</div><div class="card">
-<h3>Andrew Whitehead</h3>
-<p>University of California, Davis</p>
-<p class="speaker-session">Toxicology, Environmental Exposure, and Disease Risk</p>
-</div><div class="card">
-<h3>Jeff Yoder</h3>
-<p>North Carolina State University</p>
-<p class="speaker-session">Immunology and Microbiome</p>
-</div><div class="card">
-<h3>Yunlu Zhu</h3>
-<p>University of Michigan</p>
-<p class="speaker-session">Behavior, Neuroendocrinology, and Physiology</p>
-</div></div>
-</div>
-</section>
-</main>
-<footer>
-<div class="container footer-grid">
-<div>
-<strong>AQMHD 2026</strong><br/>
-        12th Aquatic Models of Human Disease Conference<br/>
+      </a>
+    </div>
+
+    <nav class="nav-bar" aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#organisms">Model Organisms</a></li>
+        <li><a href="program.html" aria-current="false">Program</a></li>
+        <li><a href="platform-speakers.html" aria-current="page">Platform Speakers</a></li>
+        <li><a href="index.html#speakers">Keynotes</a></li>
+        <li><a href="index.html#registration">Registration</a></li>
+        <li><a href="index.html#venue">Venue</a></li>
+        <li><a href="index.html#sponsors">Sponsors</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="page-hero">
+      <div class="container">
+        <h1>Confirmed Platform Speakers</h1>
+        <p>Invited platform speakers for AQMHD 2026, organized by session.</p>
+      </div>
+    </div>
+
+    <section>
+      <div class="container">
+        <section class="session-block" aria-labelledby="session-1">
+          <h2 class="session-heading" id="session-1">Session 1. Congenital and Developmental Disorders</h2>
+          <div class="card-grid">
+          <div class="card">
+            <h3>Sarah McMenamin</h3>
+            <p>Boston College</p>
+          </div>
+          <div class="card">
+            <h3>Rosa Uribe</h3>
+            <p>Rice University</p>
+          </div>
+          </div>
+        </section>
+        <section class="session-block" aria-labelledby="session-2">
+          <h2 class="session-heading" id="session-2">Session 2. Regeneration and Reproductive Biology</h2>
+          <div class="card-grid">
+          <div class="card">
+            <h3>Amro Hamdoun</h3>
+            <p>Scripps Institution of Oceanography</p>
+          </div>
+          <div class="card">
+            <h3>Molecular Instruments</h3>
+            <p class="representative-note">Company representative to be announced</p>
+          </div>
+          </div>
+        </section>
+        <section class="session-block" aria-labelledby="session-3">
+          <h2 class="session-heading" id="session-3">Session 3. Cancer and Aging</h2>
+          <div class="card-grid">
+          <div class="card">
+            <h3>Kristin Gribble</h3>
+            <p>Marine Biological Laboratory</p>
+          </div>
+          <div class="card">
+            <h3>Enoch Ng’oma</h3>
+            <p>University of Missouri</p>
+          </div>
+          </div>
+        </section>
+        <section class="session-block" aria-labelledby="session-4">
+          <h2 class="session-heading" id="session-4">Session 4. Aquatic Genomics and Genetic Approaches to Disease Discovery</h2>
+          <div class="card-grid">
+          <div class="card">
+            <h3>Daniel Wagner</h3>
+            <p>University of California, San Francisco</p>
+          </div>
+          <div class="card">
+            <h3>Carrie Albertin</h3>
+            <p>Harvard University</p>
+          </div>
+          </div>
+        </section>
+        <section class="session-block" aria-labelledby="session-5">
+          <h2 class="session-heading" id="session-5">Session 5. Functional Genetic Screens in Disease</h2>
+          <div class="card-grid">
+          <div class="card">
+            <h3>Ellen Hoffman</h3>
+            <p>Yale University</p>
+          </div>
+          <div class="card">
+            <h3>Nicole Edwards</h3>
+            <p>University of Michigan</p>
+          </div>
+          </div>
+        </section>
+        <section class="session-block" aria-labelledby="session-6">
+          <h2 class="session-heading" id="session-6">Session 6. Metabolic and Endocrine Disease</h2>
+          <div class="card-grid">
+          <div class="card">
+            <h3>Jane Khudyakov</h3>
+            <p>University of the Pacific</p>
+          </div>
+          <div class="card">
+            <h3>Ramji Bhandari</h3>
+            <p>University of Missouri</p>
+          </div>
+          </div>
+        </section>
+        <section class="session-block" aria-labelledby="session-7">
+          <h2 class="session-heading" id="session-7">Session 7. Immunology &amp; Microbiome</h2>
+          <div class="card-grid">
+          <div class="card">
+            <h3>Elizabeth Heath-Heckman</h3>
+            <p>Michigan State University</p>
+          </div>
+          <div class="card">
+            <h3>Jeff Yoder</h3>
+            <p>North Carolina State University</p>
+          </div>
+          </div>
+        </section>
+        <section class="session-block" aria-labelledby="session-8">
+          <h2 class="session-heading" id="session-8">Session 8. Toxicology, Environmental Exposure, and Disease Risk</h2>
+          <div class="card-grid">
+          <div class="card">
+            <h3>Frauke Seemann</h3>
+            <p>Texas A&amp;M University–Corpus Christi</p>
+          </div>
+          <div class="card">
+            <h3>Andrew Whitehead</h3>
+            <p>University of California, Davis</p>
+          </div>
+          </div>
+        </section>
+        <section class="session-block" aria-labelledby="session-9">
+          <h2 class="session-heading" id="session-9">Session 9. Behavior, Neuroendocrinology, and Physiology</h2>
+          <div class="card-grid">
+          <div class="card">
+            <h3>Yunlu Zhu</h3>
+            <p>University of Michigan</p>
+          </div>
+          <div class="card">
+            <h3>Luis Hernandez-Nunez</h3>
+            <p>Stanford University</p>
+          </div>
+          </div>
+        </section>
+        <section class="session-block" aria-labelledby="session-10">
+          <h2 class="session-heading" id="session-10">Session 10. Evolutionary and Comparative Disease Models</h2>
+          <div class="card-grid">
+          <div class="card">
+            <h3>Matthew Harris</h3>
+            <p>Harvard Medical School</p>
+          </div>
+          <div class="card">
+            <h3>Kory Evans</h3>
+            <p>Rice University</p>
+          </div>
+          </div>
+        </section>
+        <section class="session-block" aria-labelledby="session-11">
+          <h2 class="session-heading" id="session-11">Session 11. Nutrition and Chronic Diseases</h2>
+          <div class="card-grid">
+          <div class="card">
+            <h3>Peggy Biga</h3>
+            <p>Texas State University</p>
+          </div>
+          <div class="card">
+            <h3>Wolfram Goessling</h3>
+            <p>Yale School of Medicine</p>
+          </div>
+          </div>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <strong>AQMHD 2026</strong><br>
+        12th Aquatic Models of Human Disease Conference<br>
         October 17–21, 2026
       </div>
-<div>
-        Marine Biological Laboratory<br/>
-        Woods Hole, Massachusetts<br/>
-<a href="mailto:aqmhd2026@gmail.com">aqmhd2026@gmail.com</a>
-</div>
-</div>
-</footer>
+      <div>
+        Marine Biological Laboratory<br>
+        Woods Hole, Massachusetts<br>
+        <a href="mailto:aqmhd2026@gmail.com">aqmhd2026@gmail.com</a>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>

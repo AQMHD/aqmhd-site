@@ -11,11 +11,14 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+
   <style>
     :root {
       --blue: #0081C8;
       --blue-dark: #0d3b5c;
       --blue-soft: #e8f5fb;
+      --gold: #f2b84b;
+      --gold-soft: #fff8e8;
       --gray-light: #f3f5f7;
       --text: #263238;
       --muted: #60717c;
@@ -145,13 +148,6 @@
       gap: 2rem;
     }
 
-    @media (max-width: 800px) {
-      .site-header { position: relative; }
-      .nav-bar ul { display: block; text-align: center; }
-      .nav-bar a { padding: 0.75rem 1rem; }
-      .footer-grid { grid-template-columns: 1fr; }
-    }
-
     .download-wrap { margin-top: 1.5rem; }
 
     .download-button {
@@ -202,7 +198,11 @@
     }
 
     .event-title { font-weight: 700; }
-    .keynote { color: var(--blue); font-weight: 900; }
+
+    .keynote {
+      color: var(--blue);
+      font-weight: 900;
+    }
 
     .location {
       color: var(--muted);
@@ -218,13 +218,47 @@
       margin-top: 0.2rem;
     }
 
+    /* Highlight the two finalized special workshops */
+    .program-list li.workshop-row {
+      margin: 0.45rem 0;
+      padding: 0.9rem 0.8rem;
+      background: var(--gold-soft);
+      border: 2px solid var(--gold);
+      border-radius: 6px;
+    }
+
+    .workshop-title {
+      color: var(--blue-dark);
+      font-weight: 900;
+    }
+
+    .workshop-label {
+      display: block;
+      margin-bottom: 0.1rem;
+      color: #d69418;
+      font-size: 0.82rem;
+      font-weight: 900;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
     @media (max-width: 800px) {
-      .program-list li { grid-template-columns: 1fr; gap: 0.1rem; }
+      .site-header { position: relative; }
+      .nav-bar ul { display: block; text-align: center; }
+      .nav-bar a { padding: 0.75rem 1rem; }
+      .footer-grid { grid-template-columns: 1fr; }
+
+      .program-list li {
+        grid-template-columns: 1fr;
+        gap: 0.1rem;
+      }
+
       .program-note { grid-column: 1; }
       .location { white-space: normal; }
     }
-</style>
+  </style>
 </head>
+
 <body>
   <header class="site-header">
     <div class="container brand-row">
@@ -239,7 +273,7 @@
         <li><a href="index.html#about">About</a></li>
         <li><a href="index.html#organisms">Model Organisms</a></li>
         <li><a href="program.html" aria-current="page">Program</a></li>
-        <li><a href="platform-speakers.html" aria-current="false">Platform Speakers</a></li>
+        <li><a href="platform-speakers.html">Platform Speakers</a></li>
         <li><a href="index.html#speakers">Keynotes</a></li>
         <li><a href="index.html#registration">Registration</a></li>
         <li><a href="index.html#venue">Venue</a></li>
@@ -254,88 +288,305 @@
       <div class="container">
         <h1>Final Program</h1>
         <p>October 17–21, 2026 · Marine Biological Laboratory · Woods Hole, Massachusetts</p>
-        <p class="download-wrap"><a class="download-button" href="AQMHD26-program.pdf" target="_blank" rel="noopener">Download the final program (PDF)</a></p>
+        <p class="download-wrap">
+          <a class="download-button" href="AQMHD26-Final-program.pdf" target="_blank" rel="noopener">
+            Download the final program (PDF)
+          </a>
+        </p>
       </div>
     </div>
 
     <section>
       <div class="container">
+
         <div class="panel">
           <h3>Saturday · October 17</h3>
           <ul class="program-list">
-            <li><span class="time">2:00–4:30 PM</span><span class="event-title">Registration</span><span class="location">Swope</span></li>
-            <li><span class="time">4:45–5:00 PM</span><span class="event-title">Opening Remarks</span><span class="location">Lillie</span></li>
-            <li><span class="time">5:00–6:30 PM</span><span class="event-title">Session 1. Congenital and Developmental Disorders</span><span class="location">Lillie</span><span class="program-note"><strong>Invited speakers:</strong> Sarah McMenamin (Boston College); Rosa Uribe (Rice University); plus 3 talks selected from abstracts. Chair TBD.</span></li>
-            <li><span class="time">6:30–7:30 PM</span><span class="event-title">Dinner</span><span class="location">Swope</span></li>
-            <li><span class="time">7:30–8:30 PM</span><span class="event-title keynote">Keynote Lecture 1: Veronica Hinman (University of Florida)</span><span class="location">Lillie</span></li>
+            <li>
+              <span class="time">2:00–4:30 PM</span>
+              <span class="event-title">Registration</span>
+              <span class="location">Swope</span>
+            </li>
+            <li>
+              <span class="time">4:45–5:00 PM</span>
+              <span class="event-title">Opening Remarks</span>
+              <span class="location">Lillie</span>
+            </li>
+            <li>
+              <span class="time">5:00–6:30 PM</span>
+              <span class="event-title">Session 1. Congenital and Developmental Disorders</span>
+              <span class="location">Lillie</span>
+              <span class="program-note"><strong>Invited speakers:</strong> Sarah McMenamin (Boston College); Rosa Uribe (Rice University); plus 3 talks selected from abstracts. Chair TBD.</span>
+            </li>
+            <li>
+              <span class="time">6:30–7:30 PM</span>
+              <span class="event-title">Dinner</span>
+              <span class="location">Swope</span>
+            </li>
+            <li>
+              <span class="time">7:30–8:30 PM</span>
+              <span class="event-title keynote">Keynote Lecture 1: Veronica Hinman (University of Florida)</span>
+              <span class="location">Lillie</span>
+            </li>
           </ul>
         </div>
 
         <div class="panel">
           <h3>Sunday · October 18</h3>
           <ul class="program-list">
-            <li><span class="time">7:00–8:30 AM</span><span class="event-title">Registration and Breakfast</span><span class="location">Swope</span></li>
-            <li><span class="time">8:30–10:00 AM</span><span class="event-title">Session 2. Regeneration and Reproductive Biology</span><span class="location">Lillie</span><span class="program-note"><strong>Invited speakers:</strong> Amro Hamdoun (Scripps Institution of Oceanography); Molecular Instruments; plus 3 talks selected from abstracts. Chair TBD.</span></li>
-            <li><span class="time">10:00–10:30 AM</span><span class="event-title">Coffee Break</span><span class="location">Lillie</span></li>
-            <li><span class="time">10:30 AM–12:00 PM</span><span class="event-title">Session 3. Cancer and Aging</span><span class="location">Lillie</span><span class="program-note"><strong>Invited speakers:</strong> Kristin Gribble (Marine Biological Laboratory); Enoch Ng’oma (University of Missouri); plus 3 talks selected from abstracts. Chair TBD.</span></li>
-            <li><span class="time">12:00–1:00 PM</span><span class="event-title">Lunch</span><span class="location">Swope</span></li>
-            <li><span class="time">1:00–1:30 PM</span><span class="event-title">Optional Tour of Aquatic Facilities at MBL / Break</span><span class="location">Lillie</span></li>
-            <li><span class="time">1:30–3:00 PM</span><span class="event-title">Session 4. Aquatic Genomics and Genetic Approaches to Disease Discovery</span><span class="location">Lillie</span><span class="program-note"><strong>Invited speakers:</strong> Daniel Wagner (UCSF); Carrie Albertin (Harvard University); plus 3 talks selected from abstracts. Chair TBD.</span></li>
-            <li><span class="time">3:00–3:30 PM</span><span class="event-title">Coffee Break</span><span class="location">Lillie</span></li>
-            <li><span class="time">3:30–5:00 PM</span><span class="event-title">Poster Session I</span><span class="location">Swope</span></li>
-            <li><span class="time">5:00–5:30 PM</span><span class="event-title">Optional Tour of Aquatic Facilities at MBL / Break</span><span class="location">Lillie</span></li>
-            <li><span class="time">5:30–6:30 PM</span><span class="event-title">Panel Discussion I: Originality, Integrity, and Artificial Intelligence</span><span class="location">Lillie</span><span class="program-note"><strong>Facilitators:</strong> Dan Gorelick (Baylor College of Medicine); Rosa Uribe (Rice University).</span></li>
-            <li><span class="time">6:30–7:30 PM</span><span class="event-title">Dinner</span><span class="location">Swope</span></li>
-            <li><span class="time">7:30–8:30 PM</span><span class="event-title keynote">Keynote Lecture 2: Tatjana Sauka-Spengler (Stowers Institute)</span><span class="location">Lillie</span></li>
-            <li><span class="time">8:30–10:00 PM</span><span class="event-title">Evening Social</span><span class="location"></span></li>
+            <li>
+              <span class="time">7:00–8:30 AM</span>
+              <span class="event-title">Registration and Breakfast</span>
+              <span class="location">Swope</span>
+            </li>
+            <li>
+              <span class="time">8:30–10:00 AM</span>
+              <span class="event-title">Session 2. Regeneration and Reproductive Biology</span>
+              <span class="location">Lillie</span>
+              <span class="program-note"><strong>Invited speakers:</strong> Amro Hamdoun (Scripps Institution of Oceanography); Molecular Instruments; plus 3 talks selected from abstracts. Chair TBD.</span>
+            </li>
+            <li>
+              <span class="time">10:00–10:30 AM</span>
+              <span class="event-title">Coffee Break</span>
+              <span class="location">Lillie</span>
+            </li>
+            <li>
+              <span class="time">10:30 AM–12:00 PM</span>
+              <span class="event-title">Session 3. Cancer and Aging</span>
+              <span class="location">Lillie</span>
+              <span class="program-note"><strong>Invited speakers:</strong> Kristin Gribble (Marine Biological Laboratory); Enoch Ng’oma (University of Missouri); plus 3 talks selected from abstracts. Chair TBD.</span>
+            </li>
+            <li>
+              <span class="time">12:00–1:00 PM</span>
+              <span class="event-title">Lunch</span>
+              <span class="location">Swope</span>
+            </li>
+            <li>
+              <span class="time">1:00–1:30 PM</span>
+              <span class="event-title">Optional Tour of Aquatic Facilities at MBL / Break</span>
+              <span class="location">Lillie</span>
+            </li>
+            <li>
+              <span class="time">1:30–3:00 PM</span>
+              <span class="event-title">Session 4. Aquatic Genomics and Genetic Approaches to Disease Discovery</span>
+              <span class="location">Lillie</span>
+              <span class="program-note"><strong>Invited speakers:</strong> Daniel Wagner (UCSF); Carrie Albertin (Harvard University); plus 3 talks selected from abstracts. Chair TBD.</span>
+            </li>
+            <li>
+              <span class="time">3:00–3:30 PM</span>
+              <span class="event-title">Coffee Break</span>
+              <span class="location">Lillie</span>
+            </li>
+            <li>
+              <span class="time">3:30–5:00 PM</span>
+              <span class="event-title">Poster Session I</span>
+              <span class="location">Swope</span>
+            </li>
+            <li>
+              <span class="time">5:00–5:30 PM</span>
+              <span class="event-title">Optional Tour of Aquatic Facilities at MBL / Break</span>
+              <span class="location">Lillie</span>
+            </li>
+
+            <li class="workshop-row">
+              <span class="time">5:30–6:30 PM</span>
+              <span class="event-title workshop-title">
+                <span class="workshop-label">Special Workshop</span>
+                Originality, Integrity, and Artificial Intelligence
+              </span>
+              <span class="location">Lillie</span>
+              <span class="program-note"><strong>Featuring:</strong> Dan Gorelick (Baylor College of Medicine); Rosa Uribe (Rice University).</span>
+            </li>
+
+            <li>
+              <span class="time">6:30–7:30 PM</span>
+              <span class="event-title">Dinner</span>
+              <span class="location">Swope</span>
+            </li>
+            <li>
+              <span class="time">7:30–8:30 PM</span>
+              <span class="event-title keynote">Keynote Lecture 2: Tatjana Sauka-Spengler (Stowers Institute)</span>
+              <span class="location">Lillie</span>
+            </li>
+            <li>
+              <span class="time">8:30–10:00 PM</span>
+              <span class="event-title">Evening Social</span>
+              <span class="location"></span>
+            </li>
           </ul>
         </div>
 
         <div class="panel">
           <h3>Monday · October 19</h3>
           <ul class="program-list">
-            <li><span class="time">7:00–8:30 AM</span><span class="event-title">Breakfast</span><span class="location">Swope</span></li>
-            <li><span class="time">8:30–10:00 AM</span><span class="event-title">Session 5. Functional Genetic Screens in Disease</span><span class="location">Lillie</span><span class="program-note"><strong>Invited speakers:</strong> Ellen Hoffman (Yale University); Nicole Edwards (University of Michigan); plus 3 talks selected from abstracts. Chair TBD.</span></li>
-            <li><span class="time">10:00–10:30 AM</span><span class="event-title">Coffee Break</span><span class="location">Lillie</span></li>
-            <li><span class="time">10:30 AM–12:00 PM</span><span class="event-title">Session 6. Metabolic and Endocrine Disease</span><span class="location">Lillie</span><span class="program-note"><strong>Invited speakers:</strong> Jane Khudyakov (University of the Pacific); Ramji Bhandari (University of Missouri); plus 3 talks selected from abstracts. Chair TBD.</span></li>
-            <li><span class="time">12:00–1:00 PM</span><span class="event-title">Lunch</span><span class="location">Swope</span></li>
-            <li><span class="time">1:00–1:30 PM</span><span class="event-title">Optional Tour of Aquatic Facilities at MBL / Break</span><span class="location">Lillie</span></li>
-            <li><span class="time">1:30–3:00 PM</span><span class="event-title">Session 7. Immunology &amp; Microbiome</span><span class="location">Lillie</span><span class="program-note"><strong>Invited speakers:</strong> Elizabeth Heath-Heckman (Michigan State University); Jeff Yoder (North Carolina State University); plus 3 talks selected from abstracts. Chair TBD.</span></li>
-            <li><span class="time">3:00–3:30 PM</span><span class="event-title">Coffee Break</span><span class="location">Lillie</span></li>
-            <li><span class="time">3:30–5:00 PM</span><span class="event-title">Poster Session II</span><span class="location">Lillie</span></li>
-            <li><span class="time">5:00–5:30 PM</span><span class="event-title">Optional Tour of Aquatic Facilities at MBL / Break</span><span class="location">Lillie</span></li>
-            <li><span class="time">5:30–6:30 PM</span><span class="event-title">Panel Discussion II: Humanized Models, -oids, and Aquatic Models of Human Disease</span><span class="location">Lillie</span><span class="program-note"><strong>Facilitator:</strong> Richard Novak (Unravel Biosciences).</span></li>
-            <li><span class="time">6:30–7:30 PM</span><span class="event-title">Dinner</span><span class="location">Swope</span></li>
-            <li><span class="time">7:30–8:30 PM</span><span class="event-title">Optional Tour of Aquatic Facilities at MBL / Break</span><span class="location">Lillie</span></li>
-            <li><span class="time">8:30–10:00 PM</span><span class="event-title">Evening Social</span><span class="location"></span></li>
+            <li>
+              <span class="time">7:00–8:30 AM</span>
+              <span class="event-title">Breakfast</span>
+              <span class="location">Swope</span>
+            </li>
+            <li>
+              <span class="time">8:30–10:00 AM</span>
+              <span class="event-title">Session 5. Functional Genetic Screens in Disease</span>
+              <span class="location">Lillie</span>
+              <span class="program-note"><strong>Invited speakers:</strong> Ellen Hoffman (Yale University); Nicole Edwards (University of Michigan); plus 3 talks selected from abstracts. Chair TBD.</span>
+            </li>
+            <li>
+              <span class="time">10:00–10:30 AM</span>
+              <span class="event-title">Coffee Break</span>
+              <span class="location">Lillie</span>
+            </li>
+            <li>
+              <span class="time">10:30 AM–12:00 PM</span>
+              <span class="event-title">Session 6. Metabolic and Endocrine Disease</span>
+              <span class="location">Lillie</span>
+              <span class="program-note"><strong>Invited speakers:</strong> Jane Khudyakov (University of the Pacific); Ramji Bhandari (University of Missouri); plus 3 talks selected from abstracts. Chair TBD.</span>
+            </li>
+            <li>
+              <span class="time">12:00–1:00 PM</span>
+              <span class="event-title">Lunch</span>
+              <span class="location">Swope</span>
+            </li>
+            <li>
+              <span class="time">1:00–1:30 PM</span>
+              <span class="event-title">Optional Tour of Aquatic Facilities at MBL / Break</span>
+              <span class="location">Lillie</span>
+            </li>
+            <li>
+              <span class="time">1:30–3:00 PM</span>
+              <span class="event-title">Session 7. Immunology &amp; Microbiome</span>
+              <span class="location">Lillie</span>
+              <span class="program-note"><strong>Invited speakers:</strong> Elizabeth Heath-Heckman (Michigan State University); Jeff Yoder (North Carolina State University); plus 3 talks selected from abstracts. Chair TBD.</span>
+            </li>
+            <li>
+              <span class="time">3:00–3:30 PM</span>
+              <span class="event-title">Coffee Break</span>
+              <span class="location">Lillie</span>
+            </li>
+            <li>
+              <span class="time">3:30–5:00 PM</span>
+              <span class="event-title">Poster Session II</span>
+              <span class="location">Lillie</span>
+            </li>
+            <li>
+              <span class="time">5:00–5:30 PM</span>
+              <span class="event-title">Optional Tour of Aquatic Facilities at MBL / Break</span>
+              <span class="location">Lillie</span>
+            </li>
+
+            <li class="workshop-row">
+              <span class="time">5:30–6:30 PM</span>
+              <span class="event-title workshop-title">
+                <span class="workshop-label">Special Workshop</span>
+                New Approach Methodologies (NAMs)
+              </span>
+              <span class="location">Lillie</span>
+              <span class="program-note"><strong>Featuring:</strong> Richard Novak (Unravel Biosciences).</span>
+            </li>
+
+            <li>
+              <span class="time">6:30–7:30 PM</span>
+              <span class="event-title">Dinner</span>
+              <span class="location">Swope</span>
+            </li>
+            <li>
+              <span class="time">7:30–8:30 PM</span>
+              <span class="event-title">Optional Tour of Aquatic Facilities at MBL / Break</span>
+              <span class="location">Lillie</span>
+            </li>
+            <li>
+              <span class="time">8:30–10:00 PM</span>
+              <span class="event-title">Evening Social</span>
+              <span class="location"></span>
+            </li>
           </ul>
         </div>
 
         <div class="panel">
           <h3>Tuesday · October 20</h3>
           <ul class="program-list">
-            <li><span class="time">7:00–8:30 AM</span><span class="event-title">Breakfast</span><span class="location">Swope</span></li>
-            <li><span class="time">8:30–10:00 AM</span><span class="event-title">Session 8. Toxicology, Environmental Exposure, and Disease Risk</span><span class="location">Lillie</span><span class="program-note"><strong>Invited speakers:</strong> Frauke Seemann (Texas A&amp;M University–Corpus Christi); Andrew Whitehead (UC Davis); plus 3 talks selected from abstracts. Chair TBD.</span></li>
-            <li><span class="time">10:00–10:30 AM</span><span class="event-title">Coffee Break</span><span class="location">Lillie</span></li>
-            <li><span class="time">10:30 AM–12:00 PM</span><span class="event-title">Session 9. Behavior, Neuroendocrinology, and Physiology</span><span class="location">Lillie</span><span class="program-note"><strong>Invited speakers:</strong> Yunlu Zhu (University of Michigan); Luis Hernandez-Nunez (Stanford University); plus 3 talks selected from abstracts. Chair TBD.</span></li>
-            <li><span class="time">12:00–1:00 PM</span><span class="event-title">Lunch</span><span class="location">Swope</span></li>
-            <li><span class="time">1:00–1:30 PM</span><span class="event-title">Optional Tour of Aquatic Facilities at MBL / Break</span><span class="location">Lillie</span></li>
-            <li><span class="time">1:30–3:00 PM</span><span class="event-title">Session 10. Evolutionary and Comparative Disease Models</span><span class="location">Lillie</span><span class="program-note"><strong>Invited speakers:</strong> Matthew Harris (Harvard Medical School); Kory Evans (Rice University); plus 3 talks selected from abstracts. Chair TBD.</span></li>
-            <li><span class="time">3:00–3:30 PM</span><span class="event-title">Coffee Break</span><span class="location">Lillie</span></li>
-            <li><span class="time">3:30–5:00 PM</span><span class="event-title">Session 11. Nutrition and Chronic Diseases</span><span class="location">Lillie</span><span class="program-note"><strong>Invited speakers:</strong> Peggy Biga (Texas State University); Wolfram Goessling (Yale School of Medicine); plus 3 talks selected from abstracts. Chair TBD.</span></li>
-            <li><span class="time">5:00–5:30 PM</span><span class="event-title">Optional Tour of Aquatic Facilities at MBL / Break</span><span class="location">Lillie</span></li>
-            <li><span class="time">5:30–6:30 PM</span><span class="event-title keynote">Keynote Lecture 3: Bill Jeffery (University of Maryland)</span><span class="location">Lillie</span></li>
-            <li><span class="time">6:30–9:00 PM</span><span class="event-title">Dinner &amp; Awards Ceremony</span><span class="location">Swope</span></li>
+            <li>
+              <span class="time">7:00–8:30 AM</span>
+              <span class="event-title">Breakfast</span>
+              <span class="location">Swope</span>
+            </li>
+            <li>
+              <span class="time">8:30–10:00 AM</span>
+              <span class="event-title">Session 8. Toxicology, Environmental Exposure, and Disease Risk</span>
+              <span class="location">Lillie</span>
+              <span class="program-note"><strong>Invited speakers:</strong> Frauke Seemann (Texas A&amp;M University–Corpus Christi); Andrew Whitehead (UC Davis); plus 3 talks selected from abstracts. Chair TBD.</span>
+            </li>
+            <li>
+              <span class="time">10:00–10:30 AM</span>
+              <span class="event-title">Coffee Break</span>
+              <span class="location">Lillie</span>
+            </li>
+            <li>
+              <span class="time">10:30 AM–12:00 PM</span>
+              <span class="event-title">Session 9. Behavior, Neuroendocrinology, and Physiology</span>
+              <span class="location">Lillie</span>
+              <span class="program-note"><strong>Invited speakers:</strong> Yunlu Zhu (University of Michigan); Luis Hernandez-Nunez (Stanford University); plus 3 talks selected from abstracts. Chair TBD.</span>
+            </li>
+            <li>
+              <span class="time">12:00–1:00 PM</span>
+              <span class="event-title">Lunch</span>
+              <span class="location">Swope</span>
+            </li>
+            <li>
+              <span class="time">1:00–1:30 PM</span>
+              <span class="event-title">Optional Tour of Aquatic Facilities at MBL / Break</span>
+              <span class="location">Lillie</span>
+            </li>
+            <li>
+              <span class="time">1:30–3:00 PM</span>
+              <span class="event-title">Session 10. Evolutionary and Comparative Disease Models</span>
+              <span class="location">Lillie</span>
+              <span class="program-note"><strong>Invited speakers:</strong> Matthew Harris (Harvard Medical School); Kory Evans (Rice University); plus 3 talks selected from abstracts. Chair TBD.</span>
+            </li>
+            <li>
+              <span class="time">3:00–3:30 PM</span>
+              <span class="event-title">Coffee Break</span>
+              <span class="location">Lillie</span>
+            </li>
+            <li>
+              <span class="time">3:30–5:00 PM</span>
+              <span class="event-title">Session 11. Nutrition and Chronic Diseases</span>
+              <span class="location">Lillie</span>
+              <span class="program-note"><strong>Invited speakers:</strong> Peggy Biga (Texas State University); Wolfram Goessling (Yale School of Medicine); plus 3 talks selected from abstracts. Chair TBD.</span>
+            </li>
+            <li>
+              <span class="time">5:00–5:30 PM</span>
+              <span class="event-title">Optional Tour of Aquatic Facilities at MBL / Break</span>
+              <span class="location">Lillie</span>
+            </li>
+            <li>
+              <span class="time">5:30–6:30 PM</span>
+              <span class="event-title keynote">Keynote Lecture 3: Bill Jeffery (University of Maryland)</span>
+              <span class="location">Lillie</span>
+            </li>
+            <li>
+              <span class="time">6:30–9:00 PM</span>
+              <span class="event-title">Dinner &amp; Awards Ceremony</span>
+              <span class="location">Swope</span>
+            </li>
           </ul>
         </div>
 
         <div class="panel">
           <h3>Wednesday · October 21</h3>
           <ul class="program-list">
-            <li><span class="time">7:00–9:00 AM</span><span class="event-title">Breakfast</span><span class="location">Swope</span></li>
-            <li><span class="time">9:00 AM</span><span class="event-title">Departure</span><span class="location"></span></li>
+            <li>
+              <span class="time">7:00–9:00 AM</span>
+              <span class="event-title">Breakfast</span>
+              <span class="location">Swope</span>
+            </li>
+            <li>
+              <span class="time">9:00 AM</span>
+              <span class="event-title">Departure</span>
+              <span class="location"></span>
+            </li>
           </ul>
         </div>
+
       </div>
     </section>
   </main>

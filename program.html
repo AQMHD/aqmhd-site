@@ -5,260 +5,103 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light">
   <meta name="description" content="Final program for the 12th Aquatic Models of Human Disease Conference">
-
   <title>Final Program | AQMHD 2026</title>
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
-
   <style>
     :root {
-      --blue: #0081C8;
-      --blue-dark: #0d3b5c;
-      --blue-soft: #e8f5fb;
-      --gold: #f2b84b;
-      --gold-soft: #fff8e8;
-      --gray-light: #f3f5f7;
-      --text: #263238;
-      --muted: #60717c;
-      --white: #ffffff;
+      --blue:#0081C8; --blue-dark:#0d3b5c; --blue-soft:#e8f5fb;
+      --gold:#f2b84b; --gold-soft:#fff8e8; --text:#263238;
+      --muted:#60717c; --white:#ffffff;
     }
-
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
     body {
-      margin: 0;
-      color: var(--text);
-      font-family: "Lato", Arial, Helvetica, sans-serif;
-      font-size: 18px;
-      line-height: 1.6;
-      background: var(--white);
+      margin:0; color:var(--text); font-family:"Lato",Arial,Helvetica,sans-serif;
+      font-size:18px; line-height:1.6; background:var(--white);
     }
-
-    a { color: var(--blue); }
-
-    .container {
-      width: min(1120px, calc(100% - 40px));
-      margin: 0 auto;
-    }
-
+    a { color:var(--blue); }
+    .container { width:min(1120px,calc(100% - 40px)); margin:0 auto; }
     .site-header {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: var(--white);
-      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+      position:sticky; top:0; z-index:100; background:var(--white);
+      box-shadow:0 2px 12px rgba(0,0,0,.08);
     }
-
-    .brand-row { padding: 1rem 0; }
-
+    .brand-row { padding:1rem 0; }
     .site-logo {
-      font-family: "Josefin Sans", sans-serif;
-      font-size: clamp(1.7rem, 4vw, 2.8rem);
-      line-height: 1;
-      color: var(--blue-dark);
-      letter-spacing: 0.03em;
-      text-decoration: none;
-      text-transform: uppercase;
+      font-family:"Josefin Sans",sans-serif; font-size:clamp(1.7rem,4vw,2.8rem);
+      line-height:1; color:var(--blue-dark); letter-spacing:.03em;
+      text-decoration:none; text-transform:uppercase;
     }
-
     .site-logo span {
-      display: block;
-      margin-top: 0.25rem;
-      font-family: "Lato", Arial, sans-serif;
-      font-size: 0.8rem;
-      font-weight: 700;
-      letter-spacing: 0.16em;
-      color: var(--muted);
+      display:block; margin-top:.25rem; font-family:"Lato",Arial,sans-serif;
+      font-size:.8rem; font-weight:700; letter-spacing:.16em; color:var(--muted);
     }
-
-    .nav-bar { background: var(--blue); }
-
+    .nav-bar { background:var(--blue); }
     .nav-bar ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+      list-style:none; margin:0; padding:0; display:flex; flex-wrap:wrap;
+      justify-content:center;
     }
-
     .nav-bar a {
-      display: block;
-      padding: 0.95rem 1.1rem;
-      color: var(--white);
-      text-decoration: none;
-      font-size: 0.92rem;
-      font-weight: 700;
+      display:block; padding:.95rem 1.1rem; color:var(--white);
+      text-decoration:none; font-size:.92rem; font-weight:700;
     }
-
-    .nav-bar a:hover,
-    .nav-bar a:focus { text-decoration: underline; }
-
-    .page-hero {
-      background: var(--blue-soft);
-      padding: 4rem 0;
-      text-align: center;
-    }
-
+    .nav-bar a:hover,.nav-bar a:focus { text-decoration:underline; }
+    .page-hero { background:var(--blue-soft); padding:4rem 0; text-align:center; }
     .page-hero h1 {
-      margin: 0 0 1rem;
-      color: var(--blue-dark);
-      font-family: "Josefin Sans", sans-serif;
-      font-size: clamp(2.4rem, 6vw, 4.5rem);
-      font-weight: 300;
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
+      margin:0 0 1rem; color:var(--blue-dark); font-family:"Josefin Sans",sans-serif;
+      font-size:clamp(2.4rem,6vw,4.5rem); font-weight:300;
+      text-transform:uppercase; letter-spacing:.04em;
     }
-
-    section { padding: 4.25rem 0; }
-
-    h2 {
-      margin: 0 0 2rem;
-      color: var(--blue-dark);
-      font-family: "Josefin Sans", sans-serif;
-      font-size: clamp(2rem, 4vw, 3rem);
-      font-weight: 300;
-      text-align: center;
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
-    }
-
-    h3 {
-      margin: 0 0 1rem;
-      color: var(--blue-dark);
-      font-size: 1.35rem;
-      line-height: 1.25;
-    }
-
-    footer {
-      background: var(--blue-dark);
-      color: var(--white);
-      padding: 2.5rem 0;
-      font-size: 0.95rem;
-    }
-
-    footer a { color: var(--white); }
-
-    .footer-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-      gap: 2rem;
-    }
-
-    .download-wrap { margin-top: 1.5rem; }
-
+    section { padding:4.25rem 0; }
+    h3 { margin:0 0 1rem; color:var(--blue-dark); font-size:1.35rem; line-height:1.25; }
+    .download-wrap { margin-top:1.5rem; }
     .download-button {
-      display: inline-block;
-      padding: 0.8rem 1.25rem;
-      border-radius: 4px;
-      background: var(--blue);
-      color: var(--white);
-      font-weight: 900;
-      text-decoration: none;
+      display:inline-block; padding:.8rem 1.25rem; border-radius:4px;
+      background:var(--blue); color:var(--white); font-weight:900; text-decoration:none;
     }
-
-    .download-button:hover,
-    .download-button:focus {
-      background: var(--blue-dark);
-      text-decoration: underline;
+    .download-button:hover,.download-button:focus {
+      background:var(--blue-dark); text-decoration:underline;
     }
-
     .panel {
-      background: var(--white);
-      border-radius: 6px;
-      padding: 2rem;
-      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
-      margin-bottom: 1.75rem;
-      border-left: 6px solid var(--blue);
+      background:var(--white); border-radius:6px; padding:2rem;
+      box-shadow:0 4px 18px rgba(0,0,0,.08); margin-bottom:1.75rem;
+      border-left:6px solid var(--blue);
     }
-
-    .program-list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
+    .program-list { list-style:none; padding:0; margin:0; }
     .program-list li {
-      display: grid;
-      grid-template-columns: 155px minmax(0, 1fr) auto;
-      gap: 0 1rem;
-      align-items: baseline;
-      padding: 0.72rem 0;
-      border-bottom: 1px solid #dce8ee;
+      display:grid; grid-template-columns:155px minmax(0,1fr) auto;
+      gap:0 1rem; align-items:start; padding:.78rem 0;
+      border-bottom:1px solid #dce8ee;
     }
-
-    .program-list li:last-child { border-bottom: none; }
-
-    .time {
-      font-weight: 900;
-      color: var(--blue-dark);
+    .program-list li:last-child { border-bottom:none; }
+    .time { font-weight:900; color:var(--blue-dark); }
+    .event-title { font-weight:700; }
+    .keynote { color:var(--blue); font-weight:900; }
+    .location { color:var(--muted); font-size:.92rem; white-space:nowrap; }
+    .program-list li.highlight-row {
+      margin:.45rem 0; padding:.95rem .85rem; background:var(--gold-soft);
+      border:2px solid var(--gold); border-radius:6px;
     }
-
-    .event-title { font-weight: 700; }
-
-    .keynote {
-      color: var(--blue);
-      font-weight: 900;
+    .highlight-title { color:var(--blue-dark); font-weight:900; }
+    footer {
+      background:var(--blue-dark); color:var(--white);
+      padding:2.5rem 0; font-size:.95rem;
     }
-
-    .location {
-      color: var(--muted);
-      font-size: 0.92rem;
-      white-space: nowrap;
+    footer a { color:var(--white); }
+    .footer-grid {
+      display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:2rem;
     }
-
-    .program-note {
-      grid-column: 2 / -1;
-      display: block;
-      color: var(--muted);
-      font-size: 0.95rem;
-      margin-top: 0.2rem;
-    }
-
-    /* Highlight the two finalized special workshops */
-    .program-list li.workshop-row {
-      margin: 0.45rem 0;
-      padding: 0.9rem 0.8rem;
-      background: var(--gold-soft);
-      border: 2px solid var(--gold);
-      border-radius: 6px;
-    }
-
-    .workshop-title {
-      color: var(--blue-dark);
-      font-weight: 900;
-    }
-
-    .workshop-label {
-      display: block;
-      margin-bottom: 0.1rem;
-      color: #d69418;
-      font-size: 0.82rem;
-      font-weight: 900;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
-
-    @media (max-width: 800px) {
-      .site-header { position: relative; }
-      .nav-bar ul { display: block; text-align: center; }
-      .nav-bar a { padding: 0.75rem 1rem; }
-      .footer-grid { grid-template-columns: 1fr; }
-
-      .program-list li {
-        grid-template-columns: 1fr;
-        gap: 0.1rem;
-      }
-
-      .program-note { grid-column: 1; }
-      .location { white-space: normal; }
+    @media (max-width:800px) {
+      .site-header { position:relative; }
+      .nav-bar ul { display:block; text-align:center; }
+      .nav-bar a { padding:.75rem 1rem; }
+      .footer-grid { grid-template-columns:1fr; }
+      .program-list li { grid-template-columns:1fr; gap:.12rem; }
+      .location { white-space:normal; }
     }
   </style>
 </head>
-
 <body>
   <header class="site-header">
     <div class="container brand-row">
@@ -267,7 +110,6 @@
         <span>Aquatic Models of Human Disease</span>
       </a>
     </div>
-
     <nav class="nav-bar" aria-label="Main navigation">
       <ul>
         <li><a href="index.html#about">About</a></li>
@@ -282,7 +124,6 @@
       </ul>
     </nav>
   </header>
-
   <main>
     <div class="page-hero">
       <div class="container">
@@ -295,10 +136,9 @@
         </p>
       </div>
     </div>
-
     <section>
       <div class="container">
-
+        
         <div class="panel">
           <h3>Saturday · October 17</h3>
           <ul class="program-list">
@@ -308,29 +148,27 @@
               <span class="location">Swope</span>
             </li>
             <li>
-              <span class="time">4:45–5:00 PM</span>
-              <span class="event-title">Opening Remarks</span>
+              <span class="time">4:45–5:00</span>
+              <span class="event-title">Opening remarks</span>
               <span class="location">Lillie</span>
             </li>
             <li>
-              <span class="time">5:00–6:30 PM</span>
-              <span class="event-title">Session 1. Congenital and Developmental Disorders</span>
-              <span class="location">Lillie</span>
-              <span class="program-note"><strong>Invited speakers:</strong> Sarah McMenamin (Boston College); Rosa Uribe (Rice University); plus 3 talks selected from abstracts. Chair TBD.</span>
+              <span class="time">5:00–6:30</span>
+              <span class="event-title"><b>Session 1. Congenital and Developmental Disorders</b><br>Invited Speakers (chair-TBD):<br>&bull; Sarah McMenamin (Boston College)<br>&bull; Rosa Uribe (Rice University)<br>&bull; 3 talks selected from abstract</span>
+              <span class="location"></span>
             </li>
             <li>
-              <span class="time">6:30–7:30 PM</span>
+              <span class="time">6:30–7:30</span>
               <span class="event-title">Dinner</span>
               <span class="location">Swope</span>
             </li>
             <li>
-              <span class="time">7:30–8:30 PM</span>
-              <span class="event-title keynote">Keynote Lecture 1: Veronica Hinman (University of Florida)</span>
+              <span class="time">7:30–8:30</span>
+              <span class="event-title keynote"><b>Keynote Lecture 1: Veronica Hinman (University of Florida)</b></span>
               <span class="location">Lillie</span>
             </li>
           </ul>
         </div>
-
         <div class="panel">
           <h3>Sunday · October 18</h3>
           <ul class="program-list">
@@ -340,80 +178,67 @@
               <span class="location">Swope</span>
             </li>
             <li>
-              <span class="time">8:30–10:00 AM</span>
-              <span class="event-title">Session 2. Regeneration and Reproductive Biology</span>
+              <span class="time">8:30–10:00</span>
+              <span class="event-title"><b>Session 2. Regeneration and Reproductive Biology</b><br>Invited Speakers (chair-TBD):<br>&bull; Amro Hamdoun (Scripps Institution of Oceanography)<br>&bull; Molecular Instruments<br>&bull; 3 talks selected from abstract</span>
               <span class="location">Lillie</span>
-              <span class="program-note"><strong>Invited speakers:</strong> Amro Hamdoun (Scripps Institution of Oceanography); Molecular Instruments; plus 3 talks selected from abstracts. Chair TBD.</span>
             </li>
             <li>
-              <span class="time">10:00–10:30 AM</span>
+              <span class="time">10:00–10:30</span>
               <span class="event-title">Coffee Break</span>
               <span class="location">Lillie</span>
             </li>
             <li>
-              <span class="time">10:30 AM–12:00 PM</span>
-              <span class="event-title">Session 3. Cancer and Aging</span>
+              <span class="time">10:30–12:00</span>
+              <span class="event-title"><b>Session 3. Cancer and Aging</b><br>Invited Speakers (chair-TBD):<br>&bull; Kristin Gribble (MBL)<br>&bull; Enoch Ng'oma (University of Missouri)<br>&bull; 3 talks selected from abstract</span>
               <span class="location">Lillie</span>
-              <span class="program-note"><strong>Invited speakers:</strong> Kristin Gribble (Marine Biological Laboratory); Enoch Ng’oma (University of Missouri); plus 3 talks selected from abstracts. Chair TBD.</span>
             </li>
             <li>
-              <span class="time">12:00–1:00 PM</span>
+              <span class="time">12:00–1:30 PM</span>
               <span class="event-title">Lunch</span>
               <span class="location">Swope</span>
             </li>
             <li>
-              <span class="time">1:00–1:30 PM</span>
+              <span class="time">1:30–3:00</span>
+              <span class="event-title"><b>Session 4. Aquatic Genomics and Genetic Approaches to Disease Discovery.</b><br>Invited Speakers (chair-TBD):<br>&bull; Daniel Wagner (UCSF)<br>&bull; Carrie Albertin (Harvard University)<br>&bull; 3 talks selected from abstract</span>
               <span class="location">Lillie</span>
             </li>
             <li>
-              <span class="time">1:30–3:00 PM</span>
-              <span class="event-title">Session 4. Aquatic Genomics and Genetic Approaches to Disease Discovery</span>
-              <span class="location">Lillie</span>
-              <span class="program-note"><strong>Invited speakers:</strong> Daniel Wagner (UCSF); Carrie Albertin (Harvard University); plus 3 talks selected from abstracts. Chair TBD.</span>
-            </li>
-            <li>
-              <span class="time">3:00–3:30 PM</span>
+              <span class="time">3:00–3:30</span>
               <span class="event-title">Coffee Break</span>
               <span class="location">Lillie</span>
             </li>
             <li>
-              <span class="time">3:30–5:00 PM</span>
+              <span class="time">3:30–5:00</span>
               <span class="event-title">Poster Session I</span>
               <span class="location">Swope</span>
             </li>
             <li>
-              <span class="time">5:00–5:30 PM</span>
+              <span class="time">5:00–5:30</span>
+              <span class="event-title">Break</span>
               <span class="location">Lillie</span>
             </li>
-
-            <li class="workshop-row">
-              <span class="time">5:30–6:30 PM</span>
-              <span class="event-title workshop-title">
-                <span class="workshop-label">Special Workshop</span>
-                Originality, Integrity, and Artificial Intelligence
-              </span>
+            <li class="highlight-row">
+              <span class="time">5:30–6:30</span>
+              <span class="event-title highlight-title"><b>Panel Discussion I: Originality, Integrity, and Artificial Intelligence</b><br>Facilitator:<br>&bull; Dan Gorelick (Baylor College of Medicine)<br>&bull; Rosa Uribe (Rice University)</span>
               <span class="location">Lillie</span>
-              <span class="program-note"><strong>Featuring:</strong> Dan Gorelick (Baylor College of Medicine); Rosa Uribe (Rice University).</span>
             </li>
-
             <li>
-              <span class="time">6:30–7:30 PM</span>
+              <span class="time">6:30–7:30</span>
               <span class="event-title">Dinner</span>
               <span class="location">Swope</span>
             </li>
             <li>
-              <span class="time">7:30–8:30 PM</span>
-              <span class="event-title keynote">Keynote Lecture 2: Tatjana Sauka-Spengler (Stowers Institute)</span>
+              <span class="time">7:30–8:30</span>
+              <span class="event-title keynote"><b>Keynote Lecture 2: Tatjana Sauka-Spengler (Stowers Institute)</b></span>
               <span class="location">Lillie</span>
             </li>
             <li>
-              <span class="time">8:30–10:00 PM</span>
+              <span class="time">8:30–10:00</span>
               <span class="event-title">Evening Social</span>
               <span class="location"></span>
             </li>
           </ul>
         </div>
-
         <div class="panel">
           <h3>Monday · October 19</h3>
           <ul class="program-list">
@@ -423,82 +248,67 @@
               <span class="location">Swope</span>
             </li>
             <li>
-              <span class="time">8:30–10:00 AM</span>
-              <span class="event-title">Session 5. Functional Genetic Screens in Disease</span>
+              <span class="time">8:30–10:00</span>
+              <span class="event-title"><b>Session 5: Functional Genetic Screens in Disease</b><br>Invited Speakers (chair-TBD):<br>&bull; Ellen Hoffman (Yale University)<br>&bull; Nicole Edwards (University of Michigan)<br>&bull; 3 talks selected from abstract</span>
               <span class="location">Lillie</span>
-              <span class="program-note"><strong>Invited speakers:</strong> Ellen Hoffman (Yale University); Nicole Edwards (University of Michigan); plus 3 talks selected from abstracts. Chair TBD.</span>
             </li>
             <li>
-              <span class="time">10:00–10:30 AM</span>
+              <span class="time">10:00–10:30</span>
               <span class="event-title">Coffee Break</span>
               <span class="location">Lillie</span>
             </li>
             <li>
-              <span class="time">10:30 AM–12:00 PM</span>
-              <span class="event-title">Session 6. Metabolic and Endocrine Disease</span>
+              <span class="time">10:30–12:00</span>
+              <span class="event-title"><b>Session 6. Metabolic and Endocrine Disease</b><br>Invited Speakers (chair-TBD):<br>&bull; Jane Khudyakov (University of the Pacific)<br>&bull; Ramji Bhandari (University of Missouri)<br>&bull; 3 talks selected from abstract</span>
               <span class="location">Lillie</span>
-              <span class="program-note"><strong>Invited speakers:</strong> Jane Khudyakov (University of the Pacific); Ramji Bhandari (University of Missouri); plus 3 talks selected from abstracts. Chair TBD.</span>
             </li>
             <li>
               <span class="time">12:00–1:00 PM</span>
               <span class="event-title">Lunch</span>
               <span class="location">Swope</span>
             </li>
-            <li>
-              <span class="time">1:00–1:30 PM</span>
-              <span class="event-title">LSU Tech Show: Interdisciplinary Technologies for Accessible and Reproducible New Approach Methodologies</span>
+            <li class="highlight-row">
+              <span class="time">1:00–1:30</span>
+              <span class="event-title highlight-title"><b>LSU Tech Show: Interdisciplinary Technologies for Accessible and Reproducible New Approach Methodologies</b></span>
               <span class="location">Lillie</span>
             </li>
             <li>
-              <span class="time">1:30–3:00 PM</span>
-              <span class="event-title">Session 7. Immunology &amp; Microbiome</span>
+              <span class="time">1:30–3:00</span>
+              <span class="event-title"><b>Session 7. Immunology &amp; Microbiome</b><br>Invited speakers (chair-TBD):<br>&bull; Elizabeth Heath-Heckman (Michigan State University)<br>&bull; Jeff Yoder (North Carolina State University)<br>&bull; 3 talks selected from abstract</span>
               <span class="location">Lillie</span>
-              <span class="program-note"><strong>Invited speakers:</strong> Elizabeth Heath-Heckman (Michigan State University); Jeff Yoder (North Carolina State University); plus 3 talks selected from abstracts. Chair TBD.</span>
             </li>
             <li>
-              <span class="time">3:00–3:30 PM</span>
+              <span class="time">3:00–3:30</span>
               <span class="event-title">Coffee Break</span>
               <span class="location">Lillie</span>
             </li>
             <li>
-              <span class="time">3:30–5:00 PM</span>
+              <span class="time">3:30–5:00</span>
               <span class="event-title">Poster Session II</span>
               <span class="location">Lillie</span>
             </li>
             <li>
-              <span class="time">5:00–5:30 PM</span>
-              <span class="event-title">Optional Tour of Aquatic Facilities at MBL / Break</span>
+              <span class="time">5:00–5:30</span>
+              <span class="event-title">Break</span>
               <span class="location">Lillie</span>
             </li>
-
-            <li class="workshop-row">
-              <span class="time">5:30–6:30 PM</span>
-              <span class="event-title workshop-title">
-                <span class="workshop-label">Special Workshop</span>
-                New Approach Methodologies (NAMs)
-              </span>
+            <li class="highlight-row">
+              <span class="time">5:30–6:30</span>
+              <span class="event-title highlight-title"><b>Panel Discussion II: New Approach Methodologies: Humanized models, organoids, and aquatic models of disease</b><br>Facilitator: Richard Novak (Unravel Biosciences)</span>
               <span class="location">Lillie</span>
-              <span class="program-note"><strong>Featuring:</strong> Richard Novak (Unravel Biosciences).</span>
             </li>
-
             <li>
-              <span class="time">6:30–7:30 PM</span>
+              <span class="time">6:30–7:30</span>
               <span class="event-title">Dinner</span>
               <span class="location">Swope</span>
             </li>
             <li>
-              <span class="time">7:30–8:30 PM</span>
-              <span class="event-title">Optional Tour of Aquatic Facilities at MBL / Break</span>
-              <span class="location">Lillie</span>
-            </li>
-            <li>
-              <span class="time">8:30–10:00 PM</span>
+              <span class="time">7:30–10:00</span>
               <span class="event-title">Evening Social</span>
               <span class="location"></span>
             </li>
           </ul>
         </div>
-
         <div class="panel">
           <h3>Tuesday · October 20</h3>
           <ul class="program-list">
@@ -508,21 +318,19 @@
               <span class="location">Swope</span>
             </li>
             <li>
-              <span class="time">8:30–10:00 AM</span>
-              <span class="event-title">Session 8. Toxicology, Environmental Exposure, and Disease Risk</span>
+              <span class="time">8:30–10:00</span>
+              <span class="event-title"><b>Session 8. Toxicology, Environmental Exposure, and Disease Risk</b><br>Invited Speakers (chair-TBD):<br>&bull; Frauke Seemann (Texas A&amp;M University-Corpus Christi)<br>&bull; Andrew Whitehead (UC Davis)<br>&bull; 3 talks selected from abstract</span>
               <span class="location">Lillie</span>
-              <span class="program-note"><strong>Invited speakers:</strong> Frauke Seemann (Texas A&amp;M University–Corpus Christi); Andrew Whitehead (UC Davis); plus 3 talks selected from abstracts. Chair TBD.</span>
             </li>
             <li>
-              <span class="time">10:00–10:30 AM</span>
+              <span class="time">10:00–10:30</span>
               <span class="event-title">Coffee Break</span>
               <span class="location">Lillie</span>
             </li>
             <li>
-              <span class="time">10:30 AM–12:00 PM</span>
-              <span class="event-title">Session 9. Behavior, Neuroendocrinology, and Physiology</span>
+              <span class="time">10:30–12:00</span>
+              <span class="event-title"><b>Session 9. Behavior, Neuroendocrinology, and Physiology</b><br>Invited Speakers (chair-TBD):<br>&bull; Yunlu Zhu (University of Michigan)<br>&bull; Luis Hernandez-Nunez (Stanford University)<br>&bull; 3 talks selected from abstract</span>
               <span class="location">Lillie</span>
-              <span class="program-note"><strong>Invited speakers:</strong> Yunlu Zhu (University of Michigan); Luis Hernandez-Nunez (Stanford University); plus 3 talks selected from abstracts. Chair TBD.</span>
             </li>
             <li>
               <span class="time">12:00–1:00 PM</span>
@@ -530,45 +338,42 @@
               <span class="location">Swope</span>
             </li>
             <li>
-              <span class="time">1:00–1:30 PM</span>
-              <span class="event-title">Optional Tour of Aquatic Facilities at MBL / Break</span>
+              <span class="time">1:00–1:30</span>
+              <span class="event-title">Optional: Tour of aquatic facilities at MBL/Break</span>
               <span class="location">Lillie</span>
             </li>
             <li>
-              <span class="time">1:30–3:00 PM</span>
-              <span class="event-title">Session 10. Evolutionary and Comparative Disease Models</span>
+              <span class="time">1:30–3:00</span>
+              <span class="event-title"><b>Session 10. Evolutionary and Comparative Disease Models</b><br>Invited Speakers (chair-TBD):<br>&bull; Matthew Harris (Harvard Medical School)<br>&bull; Kory Evans (Rice University)<br>&bull; 3 talks selected from abstract</span>
               <span class="location">Lillie</span>
-              <span class="program-note"><strong>Invited speakers:</strong> Matthew Harris (Harvard Medical School); Kory Evans (Rice University); plus 3 talks selected from abstracts. Chair TBD.</span>
             </li>
             <li>
-              <span class="time">3:00–3:30 PM</span>
+              <span class="time">3:00–3:30</span>
               <span class="event-title">Coffee Break</span>
               <span class="location">Lillie</span>
             </li>
             <li>
-              <span class="time">3:30–5:00 PM</span>
-              <span class="event-title">Session 11. Nutrition and Chronic Diseases</span>
-              <span class="location">Lillie</span>
-              <span class="program-note"><strong>Invited speakers:</strong> Peggy Biga (Texas State University); Wolfram Goessling (Yale School of Medicine); plus 3 talks selected from abstracts. Chair TBD.</span>
+              <span class="time">3:30–5:00</span>
+              <span class="event-title"><b>Session 11. Nutrition and Chronic Diseases</b><br>Invited Speakers (chair-TBD):<br>&bull; Peggy Biga (Texas State University)<br>&bull; Wolfram Goessling (Yale School of Medicine)<br>&bull; 3 talks selected from abstract</span>
+              <span class="location"></span>
             </li>
             <li>
-              <span class="time">5:00–5:30 PM</span>
-              <span class="event-title">Optional Tour of Aquatic Facilities at MBL / Break</span>
-              <span class="location">Lillie</span>
-            </li>
-            <li>
-              <span class="time">5:30–6:30 PM</span>
-              <span class="event-title keynote">Keynote Lecture 3: Bill Jeffery (University of Maryland)</span>
+              <span class="time">5:00–5:30</span>
+              <span class="event-title">Break</span>
               <span class="location">Lillie</span>
             </li>
             <li>
-              <span class="time">6:30–9:00 PM</span>
+              <span class="time">5:30–6:30</span>
+              <span class="event-title keynote"><b>Keynote Lecture 3: Bill Jeffery (University of Maryland)</b></span>
+              <span class="location">Lillie</span>
+            </li>
+            <li>
+              <span class="time">6:30–9:00</span>
               <span class="event-title">Dinner &amp; Awards Ceremony</span>
               <span class="location">Swope</span>
             </li>
           </ul>
         </div>
-
         <div class="panel">
           <h3>Wednesday · October 21</h3>
           <ul class="program-list">
@@ -578,17 +383,15 @@
               <span class="location">Swope</span>
             </li>
             <li>
-              <span class="time">9:00 AM</span>
+              <span class="time">9:00</span>
               <span class="event-title">Departure</span>
               <span class="location"></span>
             </li>
           </ul>
         </div>
-
       </div>
     </section>
   </main>
-
   <footer>
     <div class="container footer-grid">
       <div>

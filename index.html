@@ -10,6 +10,7 @@
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&amp;family=Lato:wght@300;400;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="images/logos/AQMHD-logo-no-shadows.png" rel="icon" type="image/png"/>
 <style>
     :root {
       --blue: #0081C8;
@@ -58,28 +59,33 @@
     .brand-row {
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      justify-content: flex-start;
       gap: 1rem;
-      padding: 1rem 0;
+      padding: 0.6rem 0;
     }
 
-    .site-logo {
-      font-family: "Josefin Sans", sans-serif;
-      font-size: clamp(1.7rem, 4vw, 2.8rem);
-      line-height: 1;
+    .site-brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 1rem;
       color: var(--blue-dark);
-      letter-spacing: 0.03em;
       text-decoration: none;
-      text-transform: uppercase;
     }
 
-    .site-logo span {
+    .header-logo {
       display: block;
-      margin-top: 0.25rem;
+      width: auto;
+      height: 82px;
+      flex: 0 0 auto;
+    }
+
+    .brand-text {
       font-family: "Lato", Arial, sans-serif;
-      font-size: 0.8rem;
-      font-weight: 700;
-      letter-spacing: 0.16em;
+      font-size: 0.95rem;
+      font-weight: 900;
+      line-height: 1.25;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
       color: var(--muted);
     }
 
@@ -490,6 +496,19 @@
         text-align: center;
       }
 
+      .site-brand {
+        flex-direction: column;
+        gap: 0.35rem;
+      }
+
+      .header-logo {
+        height: 70px;
+      }
+
+      .brand-text {
+        font-size: 0.78rem;
+      }
+
       .overview-grid,
       .footer-grid {
         grid-template-columns: 1fr;
@@ -521,9 +540,9 @@
 <body>
 <header class="site-header">
 <div class="container brand-row">
-<a aria-label="AQMHD 2026 home" class="site-logo" href="#top">
-        AQMHD 2026
-        <span>Aquatic Models of Human Disease</span>
+<a aria-label="AQMHD 2026 home" class="site-brand" href="#top">
+<img alt="AQMHD 2026 logo" class="header-logo" src="images/logos/AQMHD-logo-no-shadows.png"/>
+<span class="brand-text">Aquatic Models of Human Disease</span>
 </a>
 </div>
 <nav aria-label="Main navigation" class="nav-bar">
@@ -563,10 +582,8 @@
 
 <div class="card">
 <h3>Abstract Submission</h3>
-<p><strong>Abstract submission is now open.</strong></p>
-<p>Submit one form per abstract. Abstracts may be considered for a 15-minute talk, poster, or poster plus lightning talk. Abstract text is limited to 250 words.</p>
-<a class="button" href="https://docs.google.com/forms/d/1RjtL4n_IYKuiIR6SpWi5y1-v7x8nluEXayaswhzwcpA/viewform" rel="noopener noreferrer" target="_blank">Submit an Abstract</a>
-<p><small>The submission form opens in a new tab.</small></p>
+<p><strong>Abstract submission is now closed.</strong></p>
+<p>Thank you to everyone who submitted an abstract for AQMHD 2026. Program and presentation information will be shared with participants as it becomes available.</p>
 </div><div class="card">
 <h3>Registration</h3>
 <p class="registration-deadline">Early registration through September 4, 2026</p>

@@ -7,10 +7,11 @@
   <meta name="description" content="Confirmed invited platform speakers for the 12th Aquatic Models of Human Disease Conference">
 
   <title>Platform Speakers | AQMHD 2026</title>
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="images/logos/AQMHD-logo-no-shadows.png">
+
   <style>
     :root {
       --blue: #0081C8;
@@ -49,25 +50,36 @@
       box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
     }
 
-    .brand-row { padding: 1rem 0; }
-
-    .site-logo {
-      font-family: "Josefin Sans", sans-serif;
-      font-size: clamp(1.7rem, 4vw, 2.8rem);
-      line-height: 1;
-      color: var(--blue-dark);
-      letter-spacing: 0.03em;
-      text-decoration: none;
-      text-transform: uppercase;
+    .brand-row {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 1rem;
+      padding: 0.6rem 0;
     }
 
-    .site-logo span {
+    .site-brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 1rem;
+      color: var(--blue-dark);
+      text-decoration: none;
+    }
+
+    .header-logo {
       display: block;
-      margin-top: 0.25rem;
+      width: auto;
+      height: 82px;
+      flex: 0 0 auto;
+    }
+
+    .brand-text {
       font-family: "Lato", Arial, sans-serif;
-      font-size: 0.8rem;
-      font-weight: 700;
-      letter-spacing: 0.16em;
+      font-size: 0.95rem;
+      font-weight: 900;
+      line-height: 1.25;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
       color: var(--muted);
     }
 
@@ -130,28 +142,6 @@
       line-height: 1.25;
     }
 
-    footer {
-      background: var(--blue-dark);
-      color: var(--white);
-      padding: 2.5rem 0;
-      font-size: 0.95rem;
-    }
-
-    footer a { color: var(--white); }
-
-    .footer-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-      gap: 2rem;
-    }
-
-    @media (max-width: 800px) {
-      .site-header { position: relative; }
-      .nav-bar ul { display: block; text-align: center; }
-      .nav-bar a { padding: 0.75rem 1rem; }
-      .footer-grid { grid-template-columns: 1fr; }
-    }
-
     .session-block { margin-bottom: 3rem; }
 
     .session-heading {
@@ -181,14 +171,41 @@
       color: var(--muted);
       font-size: 0.95rem;
     }
-</style>
+
+    footer {
+      background: var(--blue-dark);
+      color: var(--white);
+      padding: 2.5rem 0;
+      font-size: 0.95rem;
+    }
+
+    footer a { color: var(--white); }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: 2rem;
+    }
+
+    @media (max-width: 800px) {
+      .site-header { position: relative; }
+      .brand-row { justify-content: center; text-align: center; }
+      .site-brand { flex-direction: column; gap: 0.35rem; }
+      .header-logo { height: 70px; }
+      .brand-text { font-size: 0.78rem; }
+      .nav-bar ul { display: block; text-align: center; }
+      .nav-bar a { padding: 0.75rem 1rem; }
+      .footer-grid { grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
+
 <body>
   <header class="site-header">
     <div class="container brand-row">
-      <a class="site-logo" href="index.html" aria-label="AQMHD 2026 home">
-        AQMHD 2026
-        <span>Aquatic Models of Human Disease</span>
+      <a class="site-brand" href="index.html" aria-label="AQMHD 2026 home">
+        <img class="header-logo" src="images/logos/AQMHD-logo-no-shadows.png" alt="AQMHD 2026 logo">
+        <span class="brand-text">Aquatic Models of Human Disease</span>
       </a>
     </div>
 
@@ -196,7 +213,7 @@
       <ul>
         <li><a href="index.html#about">About</a></li>
         <li><a href="index.html#organisms">Model Organisms</a></li>
-        <li><a href="program.html" aria-current="false">Program</a></li>
+        <li><a href="program.html">Program</a></li>
         <li><a href="platform-speakers.html" aria-current="page">Platform Speakers</a></li>
         <li><a href="index.html#speakers">Keynotes</a></li>
         <li><a href="index.html#registration">Registration</a></li>

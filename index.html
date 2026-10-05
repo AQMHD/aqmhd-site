@@ -169,7 +169,7 @@
 
     section[id],
     main[id] {
-      scroll-margin-top: 120px;
+      scroll-margin-top: var(--header-offset, 180px);
     }
 
     .light { background: var(--gray-light); }
@@ -535,6 +535,25 @@
         height: 360px;
       }
     }
+
+    .conduct-intro, .conduct-plan, .conduct-mbl { overflow-wrap: anywhere; }
+    .conduct-plan h3:not(:first-child) { margin-top: 2rem; }
+    .conduct-help {
+      border-left: 5px solid var(--blue);
+      background: var(--blue-soft);
+      padding: 0.35rem 1.25rem;
+      margin-top: 1.5rem;
+    }
+    .conduct-plan li, .conduct-mbl li { margin-bottom: 0.65rem; }
+    .conduct-source { color: var(--muted); font-size: 0.95rem; }
+    .mbl-policy { border-top: 1px solid #d7e0e5; padding: 1rem 0; }
+    .mbl-policy summary { color: var(--blue-dark); font-weight: 700; cursor: pointer; }
+    .mbl-policy summary:focus-visible { outline: 3px solid var(--blue); outline-offset: 5px; }
+    .mbl-policy-text { margin-top: 1rem; font-size: 1rem; line-height: 1.65; }
+    @media (max-width: 600px) {
+      #code-of-conduct .panel { padding: 1.25rem; }
+      #code-of-conduct ul { padding-left: 1.25rem; }
+    }
   </style>
 </head>
 <body>
@@ -555,6 +574,7 @@
 <li><a href="#speakers">Keynotes</a></li>
 <li><a href="#venue">Venue</a></li>
 <li><a href="#sponsors">Sponsors</a></li>
+<li><a href="#code-of-conduct">Code of Conduct</a></li>
 <li><a href="#contact">Contact</a></li>
 </ul>
 </nav>
@@ -575,6 +595,7 @@
 <section id="registration">
 <div class="container">
 <h2>Registration &amp; Abstracts</h2>
+<p style="text-align:center;">All participants are expected to follow the <a href="#code-of-conduct">AQMHD Code of Conduct and MBL campus requirements</a>.</p>
 <div class="card-grid">
 
 
@@ -831,6 +852,152 @@ Dan Gorelick — Baylor College of Medicine &nbsp;·&nbsp; Rosa Uribe — Rice U
 </p>
 </div>
 </section>
+<section class="light" id="code-of-conduct" aria-labelledby="conduct-title">
+<div class="container">
+<h2 id="conduct-title">Code of Conduct</h2>
+<div class="panel conduct-intro">
+<h3>Plan to Promote a Safe Environment</h3>
+<p>The organizers of the 12th Aquatic Models of Human Disease Conference (AQMHD 2026), October 17–21, 2026, at the Marine Biological Laboratory (MBL), are committed to an inclusive, safe, and respectful environment for every participant. All attendees, speakers, organizers, exhibitors, sponsors, staff, and guests are expected to follow this code of conduct and applicable MBL policies throughout the meeting, including scientific sessions, workshops, poster sessions, social events, housing, and conference-related online communications.</p>
+<p>This plan follows the safety-plan framework described in <a href="https://grants.nih.gov/grants/guide/notice-files/NOT-OD-22-074.html" target="_blank" rel="noopener noreferrer">NIH Notice NOT-OD-22-074</a>. Participation in the conference requires adherence to these expectations.</p>
+<div class="conduct-help" aria-label="Immediate help and reporting contacts">
+<p><strong>Immediate danger or medical emergency:</strong> Call <a href="tel:911">911</a> or MBL Campus Security at <a href="tel:+15082897911">508-289-7911</a>. For non-emergency security assistance, call <a href="tel:+15082897217">508-289-7217</a>. <a href="https://www.mbl.edu/about/campus-facilities-resources/security-and-campus-emergencies" target="_blank" rel="noopener noreferrer">MBL security information</a>.</p>
+<p><strong>Report a conduct concern:</strong> Speak privately with any organizer, email <a href="mailto:aqmhd2026@gmail.com">aqmhd2026@gmail.com</a>, or contact MBL Human Resources at <a href="mailto:hr@mbl.edu">hr@mbl.edu</a>. The conference email account is shared by the organizing committee; use a private conversation or MBL Human Resources if you prefer another reporting route.</p>
+</div>
+</div>
+<div class="panel conduct-plan">
+<h3>Expectations of Behavior</h3>
+<p>Treat others with dignity and respect. Welcome different perspectives, discuss scientific disagreements professionally, respect personal boundaries, and follow MBL health, safety, access, and alcohol rules. Maintain scientific integrity and respect others’ work and property.</p>
+<p>Discrimination, harassment, intimidation, bullying, and retaliation are prohibited. This includes conduct based on race, color, ethnicity, national origin, ancestry, religion, age, disability, sex, pregnancy, gender identity or expression, sexual orientation, or any other characteristic protected by applicable law. Examples of unacceptable behavior include:</p>
+<ul>
+<li>Sexual harassment, unwanted sexual attention, requests for sexual favors, or unwelcome physical contact.</li>
+<li>Racial or ethnic harassment, slurs, degrading jokes, misogynistic comments, or offensive images or messages directed at others.</li>
+<li>Threats, stalking, intimidation, physical aggression, or deliberate interference with another person’s participation.</li>
+<li>Retaliation against anyone who raises a concern in good faith, supports another participant, or cooperates with a review.</li>
+</ul>
+<p>Conduct may violate this code even when it does not meet a legal definition of unlawful harassment. Anyone asked to stop inappropriate behavior must do so immediately.</p>
+<h3>Reporting Concerns Privately</h3>
+<p>If you experience or witness suspected misconduct, promptly report it to one or more of the organizers: <strong>Harini Iyer</strong> (Rice University), <strong>Yuan Lu</strong> (Texas State University), <strong>Stefan C. Materna</strong> (University of California, Merced), or <strong>Andrew (Drew) Thompson</strong> (Western Michigan University). You may speak with an organizer privately at the meeting or email <a href="mailto:aqmhd2026@gmail.com">aqmhd2026@gmail.com</a> to request a private conversation. Participants are expected to report suspected violations; you do not need to confront the person involved or investigate the incident yourself.</p>
+<p>You may also report directly to MBL Human Resources at <a href="mailto:hr@mbl.edu">hr@mbl.edu</a>. If a concern involves an organizer, contact another organizer or MBL Human Resources directly. An organizer involved in a complaint will not participate in its assessment or decisions.</p>
+<p>When possible, provide a description of what happened, when and where it occurred, the people involved, and any relevant witnesses or records. You may report even if you do not have all of this information. Reports will be handled as confidentially as possible, with information shared only as needed to address the concern, protect participants, or meet applicable obligations. Complete confidentiality cannot be guaranteed.</p>
+<h3>Assessment, Support, and Consequences</h3>
+<p>Organizers will respond promptly, assess immediate safety needs, document the report and actions taken, and coordinate with MBL or other appropriate authorities when further review is needed. The response may include gathering accounts from the reporting person, the person whose conduct is reported, and relevant witnesses, and reviewing available information. Organizers will take reasonable steps to ensure a fair assessment and will not require the reporting person to confront the person involved.</p>
+<p>Supportive measures will be discussed with the affected participant and may include help contacting MBL resources, arranging separation from the person involved, or adjusting conference participation arrangements. Organizers will explain the next steps and communicate relevant outcomes to the parties as appropriate, while respecting privacy.</p>
+<p>Consequences may include a warning, a requirement to stop the behavior, restrictions on participation, or removal from the conference. Serious misconduct may result in immediate removal; repeated violations may also result in dismissal. MBL may separately restrict access to its facilities or take action under its own policies. Retaliation is itself a violation and should be reported promptly.</p>
+<h3>Independent Reporting to HHS and NIH</h3>
+<p>Individuals with questions, concerns, or complaints related to harassment or discrimination may contact the conference organizers or the <a href="https://www.hhs.gov/civil-rights/filing-a-complaint/index.html" target="_blank" rel="noopener noreferrer">HHS Office for Civil Rights (OCR)</a>. That page explains how to file a civil rights complaint and links to the online complaint portal.</p>
+<p><strong>You do not have to file a complaint with the conference organizers before filing a discrimination complaint with HHS OCR.</strong> Seeking assistance from the organizers does not prevent you from filing a complaint with HHS OCR.</p>
+<p>Concerns about harassment, including sexual harassment, discrimination, or other inappropriate conduct at NIH-supported conferences may also be reported using the resources on the <a href="https://grants.nih.gov/policy-and-compliance/policy-topics/harassment/find-help" target="_blank" rel="noopener noreferrer">NIH Find Help page</a>, which includes a link to notify NIH.</p>
+<h3>Communicating and Maintaining This Plan</h3>
+<p>This plan will be shared with participants before the conference and highlighted at the opening of the meeting. Organizers will maintain a restricted-access record of reports, assessments, and resulting actions, and work with MBL to address continuing safety concerns.</p>
+</div>
+<div class="panel conduct-mbl">
+<h3>MBL Policies and Campus Requirements</h3>
+<p>Conference participants must also follow the MBL policies provided in its 2026 conference acknowledgement packet. The harassment and conduct policy texts from that packet are available below. This webpage does not replace MBL’s required participant acknowledgement.</p>
+<ul>
+<li><strong>Campus health:</strong> Follow MBL’s current respiratory-virus precautions and any masking requirements. If you develop symptoms, inform your primary MBL contact, obtain a respiratory-virus test if possible, and stay out of MBL facilities or remain in your assigned residence until MBL’s criteria are met. If you test positive, follow MBL’s isolation requirements and seek medical care as needed.</li>
+<li><strong>Building access:</strong> Do not lend your MBL ID card or use your access to admit another person into MBL facilities.</li>
+<li><strong>Alcohol and drugs:</strong> Alcohol on MBL property is limited to beer and wine at scheduled mixers, receptions, and dinners. Alcohol is prohibited in housing common areas, including lounges, corridors, and stairwells. Illegal drugs are prohibited, and applicable laws must be followed.</li>
+<li><strong>Safety concerns:</strong> Report concerns about MBL safety practices to <a href="mailto:hr@mbl.edu">hr@mbl.edu</a> or Environmental Health &amp; Safety at <a href="mailto:safety@mbl.edu">safety@mbl.edu</a>.</li>
+</ul>
+<p class="conduct-source">Source: MBL 2026 conference acknowledgement packet. Policy wording is reproduced as supplied; formatting has been simplified.</p>
+<details class="mbl-policy"><summary>Read MBL Unlawful Harassment Policy (A.2.1; revised April 11, 2025)</summary><div class="mbl-policy-text"><p>A.2.1 Unlawful Harassment Policy</p>
+<p>Marine Biological Laboratory Policy No. A.2.1</p>
+<p>EEO</p>
+<p>Initiated by: Director/CEO Date: July, 1987</p>
+<p>Revision: #7, April 11, 2025 Distribution: The MBL Community</p>
+<p>THE.INFORMATION.BELOW.SUPPLEMENTS.THE.NATIONAL.POLICIES CONTAINED.ON.THE.INTRANET.FOR.EMPLOYEES.WHO.WORK.IN.THE.RELEVANT STATES</p>
+<p>1. Policy Statement</p>
+<p>It is the goal of MBL to promote a working and learning environment free of unlawful discrimination, harassment, and intimidation for every member of its scientiﬁc community (employees, visiting researchers and scholars, course participants, library users, etc.) and for anyone else who has a relationship to the community (Trustees, Corporation members, contractors, vendors, etc.). Harassment, whether discriminatory or sexual, is unlawful under both federal and state law and, as such, will not be tolerated by MBL. Further, any retaliation against an individual who has complained about harassment, or retaliation against an individual who has cooperated in an investigation of harassment, is also unlawful and will not be tolerated. MBL takes allegations of harassment seriously and will respond promptly to any complaint. Where it is determined that inappropriate conduct has occurred, MBL will take the necessary action to eliminate the conduct and impose corrective measures, including disciplinary action.</p>
+<p>1. This policy applies to all work/program-related settings and activities, whether inside or outside the MBL, and includes off-site research laboratories, ﬁeld trips, business trips, and other business-related social events. MBL property (telephones, copy machines, facsimile machines, computers, computer applications such as e-mail and Internet, etc.) may not be used to engage in conduct that violates this policy.</p>
+<p>2. While this policy sets forth goals for promoting an environment free of harassment, it is not designed or intended to limit MBL’s authority to discipline or take remedial action for conduct which is deemed unacceptable, regardless of whether that conduct satisﬁes the deﬁnition of unlawful harassment. It is expected that all members of the MBL community will conduct themselves in a manner that fosters mutual respect for one another and maintains an atmosphere of professionalism.</p>
+<p>3. MBL requires each of its supervisors and managers to be responsible for the prevention and elimination of all forms of harassment within their respective</p>
+<p>departments. Supervisors and managers, new employees, and any employee who has not been recently trained will be given training in ways to prevent unlawful harassment in the workplace.</p>
+<p>1. Deﬁnitions</p>
+<p>The Company does not tolerate and prohibits discrimination, harassment or retaliation of or against our job applicants, contractors, interns, volunteers, or employees by another employee, supervisor, vendor, customer, or any third party on the basis of race, color, creed, religion, national origin, ancestry, citizenship status, age, sex or gender (including pregnancy, childbirth and related medical conditions), gender identity or gender expression, sexual orientation, marital status, military and veteran status, physical or mental disability, protected medical condition as deﬁned by applicable state or local law, reproductive health decision making, genetic information, or any other characteristic protected by applicable federal, state, or local laws and ordinances. The Company is committed to a workplace free of discrimination, harassment and retaliation.</p>
+<p>Our management team is dedicated to ensuring the fulﬁllment of this policy as it applies to all terms and conditions of employment, including recruitment, hiring, placement, promotion, transfer, training, compensation, beneﬁts, employee activities, and general treatment during employment.</p>
+<p>Discrimination Deﬁned. Discrimination under this policy means treating differently or denying or granting a beneﬁt to an individual because of the individual’s protected characteristic.</p>
+<p>Harassment Deﬁned. Harassment is deﬁned in this policy as unwelcome conduct based on or because of any protected characteristic that creates an intimidating, offensive, or hostile work environment that interferes with work performance. Harassment can be verbal (including slurs, jokes, insults, epithets, gestures or teasing), visual (including offensive posters, symbols, cartoons, drawings, computer displays, or e-mails) or physical conduct (including physically threatening another, blocking someone’s way, etc.) that denigrates or shows hostility or aversion towards an individual because of any protected characteristic. Such conduct violates this policy, even if it does not rise to the level of a violation of applicable federal, state or local laws and ordinances. Because it is difficult to deﬁne unlawful harassment, employees are expected to behave at all times in a manner consistent with the intended purpose of this policy.</p>
+<p>Sexual Harassment Deﬁned. Sexual harassment can include all of the above actions, as well as other unwelcome conduct, such as unwelcome or unsolicited sexual advances, requests for sexual favors, conversations regarding sexual activities and other verbal or physical conduct of a sexual nature.</p>
+<p>Examples of conduct that violates this policy include:</p>
+<p>- unwelcome sexual advances, ﬂirtations, advances, leering, whistling, touching, pinching, assault, brushing up against someone’s body</p>
+<p>- requests for sexual favors or demands for sexual favors in exchange for favorable treatment</p>
+<p>- obscene or vulgar gestures, posters, or comments</p>
+<p>- sexual jokes or comments about a person’s body, sexual prowess, or sexual</p>
+<p>deﬁciencies</p>
+<p>- propositions, or suggestive or insulting comments of a sexual nature</p>
+<p>- derogatory cartoons, posters, and drawings</p>
+<p>- sexually-explicit e-mails or voicemails</p>
+<p>- uninvited touching of a sexual nature</p>
+<p>- unwelcome sexually-related comments</p>
+<p>- comments, inquiries, or gossip about one’s own or someone else’s sex life or sexual activities</p>
+<p>- conduct or comments consistently targeted at only one gender, even if the content is not sexual</p>
+<p>- teasing or other conduct directed toward a person because of the person’s gender</p>
+<p>Retaliation Deﬁned. Retaliation means adverse conduct taken because an individual reported an actual or perceived violation of this policy, opposed practices prohibited by this policy, or participated in the reporting and investigation process described</p>
+<p>below. “Adverse conduct” includes but is not limited to: shunning and avoiding an individual who reports harassment, discrimination or retaliation; express or implied threats or intimidation intended to prevent an individual from reporting harassment, discrimination or retaliation; and denying employment beneﬁts because an applicant or employee reported harassment, discrimination or retaliation or participated in the reporting and investigation process described below.</p>
+<p>ALL DISCRIMINATION, HARASSMENT AND RETALIATION IS UNACCEPTABLE IN THE WORKPLACE AND IN ANY WORK-RELATED SETTINGS SUCH AS BUSINESS TRIPS AND BUSINESS-RELATED SOCIAL FUNCTIONS, REGARDLESS OF WHETHER THE CONDUCT IS ENGAGED IN BY A SUPERVISOR, CO-WORKER, CLIENT, CUSTOMER, VENDOR, OR OTHER THIRD PARTY.</p>
+<p>Reporting Procedures. The following steps have been put into place to ensure the work environment at the Company is respectful, professional, and free of discrimination, harassment and retaliation. If an employee believes someone has violated this policy or our Equal Employment Opportunity Policy, the employee should promptly bring the matter to the immediate attention of the EEOC Coordinator (x7378) or the Director of Human Resources (x7622). If either of these individuals is the person toward whom the complaint is directed you should contact any higher level manager in your reporting chain. If the employee makes a complaint under this policy and has not received an initial response within ﬁve (5) business days, the employee should contact Courtney B immediately.</p>
+<p>Every supervisor who learns of any employee’s concern about conduct in violation of this policy, whether in a formal complaint or informally, must immediately report the issues raised to senior management (HR Director) or to the EEOC Coordinator (HR Manager) via .</p>
+<p>Investigation Procedures. Upon receiving a complaint, the Company will promptly conduct a fair and thorough investigation into the facts and circumstances of any claim of a violation of this policy or our Equal Employment Opportunity policy. To the extent possible, the Company will endeavor to keep the reporting employee’s concerns</p>
+<p>conﬁdential. However, complete conﬁdentiality may not be possible in all circumstances.</p>
+<p>During the investigation, the Company generally will interview the complainant and the accused, conduct further interviews as necessary and review any relevant documents or other information. Upon completion of the investigation, the Company will determine whether this policy has been violated based upon its reasonable evaluation of the information gathered during the investigation. The Company will inform the Complainant and the accused of the results of the investigation.</p>
+<p>The Company will take corrective measures against any person who it ﬁnds to have engaged in conduct in violation of this policy, if the Company determines such measures are necessary. These measures may include, but are not limited to, counseling, suspension, or immediate termination. Anyone, regardless of position or title, whom the Company determines has engaged in conduct that violates this policy will be subject to discipline, up to and including termination. In addition to being a violation of this policy,harassment, discrimination or retaliation can also be against the law. Employees who engage in conduct that rises to the level of a violation of law can be held personally liable for such conduct.</p>
+<p>* * * *</p>
+<p>Remember, we cannot remedy claimed discrimination, harassment or retaliation unless you bring these claims to the attention of management. Please report any conduct which you believe violates this policy.</p>
+<p>MA SEXUAL HARASSMENT (ADDENDUM TO POLICY AGAINST DISCRIMINATION ANDHARASSMENT)</p>
+<p>Sexual harassment and retaliation against an employee because the employee ﬁled a complaint of sexual harassment or because an employee aided in an investigation of a complaint of sexual harassment are unlawful. Using the Company’s complaint and investigatory procedures does not prohibit an employee from contacting or ﬁling a complaint with the appropriate governmental agency. “Sexual harassment” means sexual advances, requests for sexual favors, and other verbal or physical conduct of a sexual nature when: (a) submission to or rejection of such advances, requests or conduct is made either explicitly or implicitly a term or condition of employment or as a basis for employment decisions; or (b) such advances, requests or conduct have the purpose or effect of unreasonably interfering with an individual’s work performance by creating an intimidating, hostile, humiliating or sexually offensive work environment.</p>
+<p>While employees are encouraged to report claims internally, if an employee believes that they have been subjected to sexual harassment, the employee may ﬁle a formal complaint with the government agency, or agencies set forth below.</p>
+<p>The name, address, and telephone numbers of the state and federal enforcing agencies for Massachusetts-based employees are as follows:</p>
+<p>Massachusetts Commission Against Discrimination (MCAD)</p>
+<p>One Ashburton Place Room 601</p>
+<p>Boston, MA 02108</p>
+<p>(617) 994-6000</p>
+<p>436 Dwight Street</p>
+<p>Room 220</p>
+<p>Springﬁeld, MA 01103</p>
+<p>(413) 739-2145</p>
+<p>Denholm Building 484 Main Street</p>
+<p>Room 320</p>
+<p>Worcester, MA 01608</p>
+<p>(508) 453-9630</p>
+<p>(Federal) Equal Employment Opportunity Commission (EEOC)</p>
+<p>John F. Kennedy Federal Building 15 New Sudbury Street, Room 475</p>
+<p>Boston, MA 02203</p>
+<p>(800) 669-4000 or (800) 669-6820 TTY</p></div></details>
+<details class="mbl-policy"><summary>Read MBL Code of Conduct (G.1.19; updated February 2013)</summary><div class="mbl-policy-text"><p>G.1.19 Code of Conduct</p>
+<p>Marine Biological Laboratory</p>
+<p>Policy No. G.1.19</p>
+<p>Initiated by: Human Resources Office Approved by: MBL Board of Trustees/Audit Committee MBL Director Date: January 19, 2006 Revision: Updated February 2013 Distribution: MBL Community</p>
+<p>1.0 Policy Statement The Marine Biological Laboratory (MBL) is an international center for research, education, and training in biology. Founded in 1888, the MBL is the oldest private marine laboratory in the country.</p>
+<p>The MBL has a responsibility to the international scientific community to provide leadership in all endeavors. It is committed to the promotion of the highest standards of ethics, behavior, values and goals for all of its scientific, technical, educational, and administrative operations.</p>
+<p>This policy describes the standards of business and ethical conduct and practices the MBL expects of each officer, employee, scientific staff member, and others acting on its behalf when working for or representing the MBL, or when on MBL premises.</p>
+<p>The quality of work and the atmosphere in which it is done is expected to be consistent with this commitment and in line with the reputation of the MBL as a leading educational and research institution. The atmosphere should be one of trust and confidence in those who act on behalf of the MBL. Community members should be able to rely on the integrity of each other.</p>
+<p>The personal and professional conduct of everyone acting on its behalf should reflect the MBL’s commitment to the fundamental principles of dignity, integrity, and respect for the law; rights, health and safety of the community and others; and should not conflict with or negatively impact their obligations to the MBL or its welfare.</p>
+<p>2.0 Standards No policy can set forth every applicable rule and cover every situation; however, in carrying out the organization’s mission and obligations, employees should use common sense, all relevant MBL policies, all applicable local, state, and federal law, as well as laws of other countries where operations are being conducted, as sources for guidelines of ethical conduct, in;</p>
+<p>2.1 Applicable Statutes and Regulations: MBL’s commitment to integrity begins with complying with pertinent laws, rules, and regulations. The work of the MBL is heavily regulated. Non-compliance with laws and regulations can have severe adverse financial and other consequences, potentially affecting the reputation and operations of the institution. In addition, individuals can suffer similarly severe financial and reputation consequences. Everyone must understand the laws, rules, regulations, and MBL policies that apply to their specific roles. If you are unsure of whether a contemplated action is permitted by law or MBL policy, advice should first be sought from the appropriate resource expert listed in Addendum A before taking action.</p>
+<p>Everyone is responsible within his or her scope of work for preventing violations of law and for speaking up if possible violations are observed.</p>
+<p>2.2 Existing MBL Policies: In many cases, the MBL expects more than mere compliance with applicable law, and so our policies may contain expectations of conduct not necessarily exclusively grounded in legal requirements. All MBL policies are listed in Addendum B to this policy. Some of these represent internal policies or control procedures and are not necessarily compliance policies. Nevertheless, all members of the MBL community should become familiar with the policies related to their scope of work, particularly those relevant to compliance issues. Existing policies may be updated, revised or deleted from or added to from time to time. The Human Resources office coordinates the maintenance of all MBL policies. Copies of current policies may be accessed internally on the Human Resources web-page on the MBL web-site or obtained from any supervisor, the Grass Reading Room of the MBLWHOI Library or Human Resources office in the Homestead Building.</p>
+<p>2.3 Conflicts of Interest: The complex relationships among government, industry, research institutions, and researchers, as well as the demands of commerce necessitate the establishment of guidelines for Trustees, Officers, and scientific &amp; administrative staff regarding conflict of interest in carrying out their duties and obligations. These guidelines have both ethical and legal (federal and state) bases. Generally these guidelines call for disclosure of any situation that could reasonably be considered or even have the appearance of a conflict of interest. Also the interests of the MBL always take precedence. MBL has established policies to assist Trustees and staff in identifying conflicts that might arise and the reporting mechanisms for these conflicts. Reference MBL polices and K.1.3 Conflict of Interest Policy.</p>
+<p>2.4 Scientific Integrity: Any action or conduct on the part of its staff or personnel or those engaged in MBL-sponsored activities that would compromise scientific integrity is against policy. Specifically, a compromise of scientific integrity—also referred to as “misconduct in science”— means fabrication or falsification of data or other documentation, plagiarism, or other unethical practices that seriously deviate from those practices that are commonly accepted within the scientific community for proposing, conducting or reporting research. Honest error or honest differences in interpretations or judgments of data does not constitute a compromise of scientific integrity. Guidelines on Scientific Integrity are found in MBL policy K.1.2 Scientific Integrity.</p>
+<p>2.5 Stewardship of Property and Funds: Resources and records, including time, intellectual property, material, equipment and information, are provided for MBL business use. Nonetheless, occasional personal use is permissible as long as it does not affect job performance or cause a disruption to the workplace.</p>
+<p>Employees and those who represent MBL are trusted to behave responsibly and use good judgment to conserve institutional resources. Managers are responsible for the resources assigned to their departments and are empowered to resolve issues concerning their proper use.</p>
+<p>Generally, use of MBL equipment such as computers, copiers and fax machines in the conduct of an outside business or in support of any religious, political or other outside daily activity is not appropriate. Questions about the proper use of company resources should be directed to individual managers.</p>
+<p>The MBL wishes to foster new knowledge and secure the benefits for the long-term health of the institution. At the same time there is an obligation to keep MBL information confidential as well as the confidential information shared with the MBL community by other institutions. As a result steps to safeguard the intellectual property of the MBL are also necessary. Guidelines for this are found in MBL policy K.1.1 Intellectual Property Policy and Procedures.</p>
+<p>2.6 Recording, Allocating, and Charging Costs and Efforts: The accuracy and reliability of financial and effort reports is of utmost importance to the business operations of the institution. At all times, staff must record, allocate, and charge costs &amp; effort accurately and maintain supporting documentation as required by established policies and procedures. Guidelines are found in MBL policy E.1 Grants Accounting, Policies and Procedures Manual.</p>
+<p>2.7 Internal Controls: Internal controls provide the keystone of sound business practices. These controls include adequate segregation of duties, diligent application of preventive and detective control systems, and conscientious compliance with authorization, reporting, and other established processes. Internal controls are critical to ensuring efficient operations, responsible financial management, accurate financial reporting, careful protections of assets, and satisfactory compliance with applicable laws and regulations.</p>
+<p>2.8 Mutual Respect for Others: The MBL is committed to recognizing and acknowledging the dignity of its workers and visitors. As a result discrimination or harassment along sexual, racial, political, or religious lines has no place in our community. Guidelines regarding this are found in the MBL policies A.2 EEO Policies.</p>
+<p>3.0 Obligation to Report Suspected Violations It is the obligation of all members of the MBL community to exercise sound judgment and seek advice when appropriate and report any concerns or complaints regarding what they see as violations of law, ethical standards, or MBL policies. Members of the MBL community may choose to seek advice, express concerns, or report suspected violations regarding ethical conduct, legal requirements or MBL policy by contacting either their immediate manager, a department head, the Human Resources Office, or the Compliance Coordinator. Several MBL policies list appropriate reporting mechanisms in the context of each policy. Additionally, Addendum A provides a list of responsible persons/departments for a variety of questions/issues that might arise.</p>
+<p>3.1 If it is not clear to whom a question or concern should be directed, the Human Resources office is readily available for consultation.</p>
+<p>3.2 If a material violation of MBL policy or a law/regulation is suspected, it should be reported, referencing the guidelines in MBL policy G.1.20 Allegations of Misconduct. Please keep in mind that it is not appropriate for employees to undertake their own investigation of concerns. Their obligation is to raise the concern appropriately.</p>
+<p>3.3 Reporting individuals can be assured that there will be no reprisals or retaliation of any kind for reporting any type of suspected problem or possible violation if the report is made in good faith.</p>
+<p>3.4 The Compliance Coordinator will oversee an independent investigation of the suspected violations of law and any resulting corrective action that may be deemed necessary.</p>
+<p>4.0 Media Contact The MBL is a high-profile organization in our community, and from time to time, employees may be approached by reporters and other members of the media. To ensure that we speak with one voice and provide accurate information about the MBL, all media inquiries should be directed to the Director of Communications. No one may communicate with the media or issue a press release without first consulting with the Director of Communications.</p>
+<p>5.0 Reputation Risk When not on MBL premises or representing the MBL, the personal conduct of its officers, employees, scientific or administrative staff and others acting on the MBL’s behalf is his or her own to regulate. However, if such a member of the MBL community engages in behavior that discredits the MBL, it may be appropriate to review that individual’s responsibilities at the MBL. Any such review will be conducted by the Director of Human Resources at the request of a department head or manager. The Director of Human Resources will make a report of findings and any recommendation to the MBL Director and Audit Committee.</p>
+<p>6.0 Consequences of Violation MBL takes seriously the standards set forth in this Code of Ethical Conduct. Failure to adhere to professional and ethical standards of conduct or engaging in behavior contrary to the interests of the MBL or that interfere improperly with the rights of other persons, their property, or the rights/property of the MBL may be subject to disciplinary action up to and including discharge.</p>
+<p>7.0 Policy Clarification and Updates Policy clarification and updates are available from the Human Resources Office. The MBL reserves the right to amend this and any underlying policy at any time. Also note that this does not represent an employment contract between the MBL and any Trustee, Officer, or employee. Any exceptions to this policy must be approved by the Audit Committee.</p></div></details>
+</div>
+</div>
+</section>
+
 <section class="blue-soft" id="contact">
 <div class="container">
 <h2>Contact</h2>
@@ -872,12 +1039,25 @@ Dan Gorelick — Baylor College of Medicine &nbsp;·&nbsp; Rosa Uribe — Rice U
 <div>
         Marine Biological Laboratory<br/>
         Woods Hole, Massachusetts<br/>
-<a href="mailto:aqmhd2026@gmail.com">aqmhd2026@gmail.com</a>
+<a href="mailto:aqmhd2026@gmail.com">aqmhd2026@gmail.com</a><br/>
+<a href="#code-of-conduct">Code of Conduct &amp; Safe Environment Plan</a>
 </div>
 </div>
 </footer>
 <button aria-label="Back to top" id="back-to-top">↑</button>
 <script>
+    // Keep section headings visible beneath the navigation when it wraps.
+    const siteHeader = document.querySelector(".site-header");
+    const updateHeaderOffset = () => {
+      document.documentElement.style.setProperty("--header-offset", `${siteHeader.offsetHeight + 16}px`);
+    };
+    updateHeaderOffset();
+    if ("ResizeObserver" in window) {
+      new ResizeObserver(updateHeaderOffset).observe(siteHeader);
+    } else {
+      window.addEventListener("resize", updateHeaderOffset);
+    }
+
     const backToTop = document.getElementById("back-to-top");
 
     backToTop.addEventListener("click", function () {

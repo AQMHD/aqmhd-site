@@ -536,6 +536,88 @@
       }
     }
 
+
+
+    /* Venue, maps & Woods Hole */
+    .venue-intro {
+      max-width: 900px;
+      margin: -0.75rem auto 2rem;
+      text-align: center;
+      color: var(--muted);
+    }
+
+    .venue-map-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(300px, 0.85fr);
+      gap: 1.5rem;
+      align-items: stretch;
+      margin-bottom: 1.5rem;
+    }
+
+    .venue-map {
+      min-height: 430px;
+      border: 0;
+      border-radius: 6px;
+      width: 100%;
+      height: 100%;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+      background: var(--white);
+    }
+
+    .venue-key-list {
+      list-style: none;
+      margin: 1rem 0 0;
+      padding: 0;
+    }
+
+    .venue-key-list li {
+      padding: 0.75rem 0;
+      border-top: 1px solid #d7e0e5;
+    }
+
+    .venue-key-list li:first-child { border-top: 0; padding-top: 0; }
+
+    .venue-number {
+      display: inline-grid;
+      place-items: center;
+      width: 2rem;
+      height: 2rem;
+      margin-right: 0.5rem;
+      border-radius: 50%;
+      background: var(--blue);
+      color: var(--white);
+      font-weight: 900;
+      vertical-align: middle;
+    }
+
+    .venue-button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.55rem;
+      margin: 1.25rem -0.5rem 0;
+    }
+
+    .venue-resource-grid {
+      margin-top: 1.5rem;
+    }
+
+    .venue-resource-grid .card p:last-child { margin-bottom: 0; }
+
+    .travel-note {
+      border-left: 6px solid var(--gold);
+      background: #fff8e8;
+      padding: 1.1rem 1.35rem;
+      margin-top: 1.5rem;
+      border-radius: 4px;
+    }
+
+    .travel-note strong { color: var(--blue-dark); }
+
+    @media (max-width: 800px) {
+      .venue-map-grid { grid-template-columns: 1fr; }
+      .venue-map { min-height: 360px; }
+    }
+
     .conduct-intro, .conduct-plan, .conduct-mbl { overflow-wrap: anywhere; }
     .conduct-plan h3:not(:first-child) { margin-top: 2rem; }
     .conduct-help {
@@ -572,7 +654,7 @@
 <li><a href="#program-preview">Program</a></li>
 <li><a href="#themes">Themes</a></li>
 <li><a href="#speakers">Keynotes</a></li>
-<li><a href="#venue">Venue</a></li>
+<li><a href="#venue">Venue &amp; Maps</a></li>
 <li><a href="#sponsors">Sponsors</a></li>
 <li><a href="#code-of-conduct">Code of Conduct</a></li>
 <li><a href="#contact">Contact</a></li>
@@ -778,14 +860,64 @@ Dan Gorelick — Baylor College of Medicine &nbsp;·&nbsp; Rosa Uribe — Rice U
 </section>
 <section class="blue-soft" id="venue">
 <div class="container">
-<h2>Venue</h2>
-<div class="panel">
-<p>
-            AQMHD 2026 will be held at the Marine Biological Laboratory in Woods Hole, Massachusetts, a historic center for research, training, and collaboration in the biological sciences.
-          </p>
-<p>
-            Scientific sessions will take place primarily in Lillie Auditorium, with meals, registration, and selected poster events at Swope.
-          </p>
+<h2>Venue, Maps &amp; Woods Hole</h2>
+<p class="venue-intro">
+  AQMHD 2026 will be held at the <strong>Marine Biological Laboratory (MBL)</strong> in Woods Hole, Massachusetts. Use the resources below to find the meeting spaces, plan your arrival, and explore the village during your stay.
+</p>
+
+<div class="venue-map-grid">
+  <iframe
+    class="venue-map"
+    title="Map showing the Marine Biological Laboratory in Woods Hole"
+    src="https://www.google.com/maps?q=Marine+Biological+Laboratory,+7+MBL+Street,+Woods+Hole,+MA+02543&amp;output=embed"
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"
+    allowfullscreen>
+  </iframe>
+
+  <div class="panel" style="margin-bottom:0;">
+    <h3>Know Where to Go</h3>
+    <p><strong>Marine Biological Laboratory</strong><br/>7 MBL Street<br/>Woods Hole, MA 02543</p>
+    <ul class="venue-key-list">
+      <li><span class="venue-number">15</span><strong>Swope Center</strong><br/>5 North Street — meeting check-in, ID badges, dining, and housing check-in.</li>
+      <li><span class="venue-number">6</span><strong>Lillie Building</strong><br/>7 MBL Street — primary location for AQMHD scientific sessions.</li>
+    </ul>
+    <div class="venue-button-row">
+      <a class="button" href="https://www.mbl.edu/about/campus-facilities-resources/campus-maps" rel="noopener noreferrer" target="_blank">Official MBL Campus Maps</a>
+      <a class="button" href="https://www.mbl.edu/sites/default/files/2022-07/MBL.Campus-Grouped-Colors-parking-bikes-2021-with-legend-2022.pdf" rel="noopener noreferrer" target="_blank">Download Campus Map</a>
+    </div>
+  </div>
+</div>
+
+<div class="card-grid venue-resource-grid">
+  <div class="card">
+    <h3>Campus Maps &amp; Accessibility</h3>
+    <p>MBL provides an official campus map, Google campus map, accessibility map, single-user restroom information, and security-light map.</p>
+    <p><a href="https://www.mbl.edu/about/campus-facilities-resources/campus-maps" rel="noopener noreferrer" target="_blank">View all MBL campus maps →</a></p>
+    <p><a href="https://www.mbl.edu/about/campus-facilities-resources/campus-accessibility" rel="noopener noreferrer" target="_blank">View the accessibility map →</a></p>
+  </div>
+
+  <div class="card">
+    <h3>Travel to Woods Hole</h3>
+    <p>MBL's travel page includes driving directions, airport information, bus and local transit links, ferry information, and local hotel resources.</p>
+    <p><a href="https://www.mbl.edu/about/local-area-information/travel-information" rel="noopener noreferrer" target="_blank">MBL travel information →</a></p>
+  </div>
+
+  <div class="card">
+    <h3>Arrival &amp; Parking</h3>
+    <p>Meeting check-in is at the <strong>Swope Center, 5 North Street</strong>. The Swope Front Desk provides event ID badges and parking permits. Conference parking is limited, and an MBL permit is required for MBL lots.</p>
+    <p><a href="https://www.mbl.edu/events/conferences/general-information-faqs" rel="noopener noreferrer" target="_blank">MBL conference arrival FAQs →</a></p>
+  </div>
+
+  <div class="card">
+    <h3>Around Woods Hole</h3>
+    <p>MBL maintains a local guide with restaurants, the Woods Hole Market, supermarkets and pharmacies in Falmouth, the Woods Hole Science Aquarium, WHOI visitor resources, beaches, and the Shining Sea Bikeway.</p>
+    <p><a href="https://www.mbl.edu/about/local-area-information" rel="noopener noreferrer" target="_blank">Explore MBL's local area guide →</a></p>
+  </div>
+</div>
+
+<div class="travel-note">
+  <strong>Parking and shuttle note:</strong> Parking at MBL and in Woods Hole is limited. MBL's regular 2026 seasonal shuttle program has ended, so attendees driving to the meeting should review the current MBL arrival and parking information before traveling.
 </div>
 </div>
 </section>
